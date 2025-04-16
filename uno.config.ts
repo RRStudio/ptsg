@@ -6,8 +6,10 @@ export default defineConfig({
 		presetWebFonts({
 			provider: "google",
 			fonts: {
-				heading: "Secular One",
-				sans: "Noto Sans Hebrew",
+				sans: {
+					name: "Noto Sans Hebrew",
+					weights: [400, 700, 900],
+				},
 			},
 		}),
 	],

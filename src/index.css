@@ -17,8 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Secular One, sans-serif, system-ui;
-	font-weight: bold;
+	font-weight: 900;
 	color: var(--fg);
 }
 
