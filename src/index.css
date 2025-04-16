@@ -1,4 +1,15 @@
 :root {
+	font-family: Noto Sans Hebrew, sans-serif, system-ui;
 	color-scheme: light dark;
 	direction: rtl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Alef, serif, system-ui;
+	font-weight: bold;
 }
