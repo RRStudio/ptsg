@@ -10,12 +10,14 @@ import logo from "./assets/ptsg_logo.svg";
 // TODO: copyright w/ current year
 // TODO: rss feed
 // TODO: content
+// TODO: test light mode
+// TODO: test dark mode
 // TODO: deploy somewhere
 export default function App() {
 	return (
 		<>
 			<img src={logo} width="200" height="200" alt="Logo" />
-			<h1>פותחים סוגריים</h1>
+			<h1 class="text-primary">פותחים סוגריים</h1>
 			<p>זה עוד טקסט</p>
 		</>
 	);
