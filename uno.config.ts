@@ -5,16 +5,19 @@ export default defineConfig({
 		presetMini({
 			theme: {
 				colors: {
-					// TODO: define brand colors
+					primary: "#fc5185",
+					blue: "#1f4168",
+					cyan: "#3fc1c9",
+					white: "#fffcf6",
+					black: "#000000",
 				},
 			},
 		}),
 		presetWebFonts({
 			provider: "google",
 			fonts: {
-				// TODO: header font should be like logo
-				// TODO: define brand font for the rest of the text
-				sans: "Inter",
+				heading: "FB Katalogue",
+				sans: "Noto Sans Hebrew",
 			},
 		}),
 	],
