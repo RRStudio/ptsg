@@ -2,6 +2,13 @@
 	font-family: Noto Sans Hebrew, sans-serif, system-ui;
 	color-scheme: light dark;
 	direction: rtl;
+	background: var(--bg);
+
+	--primary: #fc5185;
+	--secondary: #3fc1c9;
+	--dim: #1f4168;
+	--fg: #fffcf6;
+	--bg: #0a0a0a;
 }
 
 h1,
@@ -10,14 +17,13 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Alef, serif, system-ui;
+	font-family: Secular One, sans-serif, system-ui;
 	font-weight: bold;
 	color: var(--fg);
 }
 
 p,
 span {
-	font-family: Noto Sans Hebrew, sans-serif, system-ui;
 	font-weight: normal;
 	color: var(--fg);
 }

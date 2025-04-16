@@ -2,11 +2,11 @@ import { defineConfig, presetMini, presetWebFonts } from "unocss";
 
 export default defineConfig({
 	presets: [
-		presetMini({ dark: "media" }),
+		presetMini(),
 		presetWebFonts({
 			provider: "google",
 			fonts: {
-				serif: "Alef",
+				heading: "Secular One",
 				sans: "Noto Sans Hebrew",
 			},
 		}),
