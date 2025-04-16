@@ -2,7 +2,7 @@
 	font-family: Noto Sans Hebrew, sans-serif, system-ui;
 	color-scheme: light dark;
 	direction: rtl;
-	background: var(--bg);
+	background: var(--dim);
 
 	--primary: #fc5185;
 	--secondary: #3fc1c9;

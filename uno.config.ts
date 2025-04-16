@@ -1,8 +1,8 @@
-import { defineConfig, presetMini, presetWebFonts } from "unocss";
+import { defineConfig, presetIcons, presetWebFonts, presetWind4 } from "unocss";
 
 export default defineConfig({
 	presets: [
-		presetMini(),
+		presetWind4(),
 		presetWebFonts({
 			provider: "google",
 			fonts: {
@@ -12,6 +12,7 @@ export default defineConfig({
 				},
 			},
 		}),
+		presetIcons({}),
 	],
 	theme: {
 		colors: {

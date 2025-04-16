@@ -16,6 +16,9 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@iconify-json/fa": "^1.2.1",
+		"@iconify-json/fa6-brands": "^1.2.5",
+		"@unocss/preset-icons": "66.1.0-beta.11",
 		"@unocss/preset-mini": "66.1.0-beta.11",
 		"@unocss/preset-web-fonts": "66.1.0-beta.11",
 		"typescript": "~5.7.2",
