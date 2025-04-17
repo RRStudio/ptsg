@@ -4,13 +4,14 @@ export type ButtonProps = {
 };
 
 export default function Button({ children, onClick }: ButtonProps) {
+	const className =
+		"bg-none border-2 border-current rounded-lg text-secondary font-bold text-lg px-5 py-3 cursor-pointer hover:brightness-80 transition-brightness duration-100";
+
 	return (
-		<button
-			type="button"
-			class="bg-secondary text-white font-bold text-lg p-4 border-none rounded-lg cursor-pointer hover:brightness-80 transition-brightness duration-100"
-			onClick={onClick}
-		>
-			{children}
-		</button>
+		<>
+			<button type="button" class={className} onClick={onClick}>
+				{children}
+			</button>
+		</>
 	);
 }

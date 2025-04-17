@@ -23,28 +23,53 @@ import Link from "./Link";
 // TODO: mobile
 export default function App() {
 	return (
-		<div class="flex flex-col items-center p-8">
-			<div class="flex items-center gap-4">
-				<a href="/">
-					<img src={logo} width="200" height="200" alt="Logo" />
-				</a>
-				<Link href="/about">אודות</Link>
-				<Link href="/episodes">פרקים</Link>
-				<Link href="/episodes">צור קשר</Link>
-				<div />
-				<IconLink icon="i-fa6-brands-telegram" href="https://t.me/ptsgdev" />
-				<IconLink
-					icon="i-fa6-brands-facebook"
-					href="https://www.facebook.com/groups/ptsgdev"
-				/>
+		<div class="w-full p-8 flex justify-center">
+			<div class="flex flex-col items-center gap-8">
+				<div class="w-full flex justify-between items-center gap-8">
+					<div class="flex justify-center items-center gap-8">
+						<a href="/">
+							<img src={logo} width="200" height="200" alt="Logo" />
+						</a>
+						<Link href="/about">אודות</Link>
+						<Link href="/episodes">פרקים</Link>
+						<Link href="/episodes">צור קשר</Link>
+					</div>
+					<div />
+					<div class="flex gap-3">
+						<IconLink
+							icon="i-fa6-brands-telegram"
+							href="https://t.me/ptsgdev"
+						/>
+						<IconLink
+							icon="i-fa6-brands-facebook"
+							href="https://www.facebook.com/groups/ptsgdev"
+						/>
+					</div>
+				</div>
+				<h1 class="text-5xl font-bold text-center m-0">
+					הפודקאסט היחיד שבו זיבולי שכל
+					<br />
+					זה חוקי.
+				</h1>
+				<h2 class="text-2xl text-center">
+					פותחים סוגריים הוא פודקאסט שבועי על כל מה שלא טכני בהייטק (ואולי גם
+					כן).
+				</h2>
+				<p class="text-xl text-center">
+					<Link href="/about" class="underline">
+						אנחנו
+					</Link>{" "}
+					נענה על השאלות שלכם, וניתן את התשובות הנכונות (והלא נכונות) - כדאי לכם
+					להקשיב לנו, כי ככה.
+				</p>
+				<Button
+					onClick={() =>
+						window.open("https://forms.gle/bRmy3ycbKwPto4dT8", "_blank")
+					}
+				>
+					שאל אותנו שאלה
+				</Button>
 			</div>
-			<Button
-				onClick={() =>
-					window.open("https://forms.gle/bRmy3ycbKwPto4dT8", "_blank")
-				}
-			>
-				שלח לנו שאלה!
-			</Button>
 		</div>
 	);
 }
