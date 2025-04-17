@@ -25,7 +25,7 @@ export default function Episodes() {
 
   const handleSearch = (e: Event) => {
     e.preventDefault();
-    setCurrentPage(1); // Reset to first page when searching
+    setCurrentPage(1);
   };
 
   const handleSearchInput = (value: string) => {
@@ -36,7 +36,7 @@ export default function Episodes() {
     searchTimeout = window.setTimeout(() => {
       setSearchTerm(value);
       setCurrentPage(1);
-    }, 300); // 300ms delay
+    }, 300);
   };
 
   onCleanup(() => {
@@ -50,6 +50,7 @@ export default function Episodes() {
       setCurrentPlaying(null);
     } else {
       setCurrentPlaying(episode.audioUrl);
+
       // Use setTimeout to ensure the audio element is mounted before playing
       setTimeout(() => {
         const audio = audioRef();
