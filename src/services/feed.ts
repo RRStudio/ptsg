@@ -5,6 +5,7 @@ export type Episode = {
   description: string;
   date: string;
   link: string;
+  audioUrl: string;
 };
 
 const ITEMS_PER_PAGE = 10;
@@ -22,6 +23,8 @@ export function useEpisodes() {
   const [episodes, setEpisodes] = createSignal<Episode[]>([]);
   const [currentPage, setCurrentPage] = createSignal(1);
   const [loading, setLoading] = createSignal(true);
+  const [searchTerm, setSearchTerm] = createSignal("");
+  const [currentPlaying, setCurrentPlaying] = createSignal<string | null>(null);
 
   async function fetchEpisodes() {
     try {
@@ -35,6 +38,7 @@ export function useEpisodes() {
         description: item.querySelector("description")?.textContent || "",
         date: formatDate(item.querySelector("pubDate")?.textContent || ""),
         link: item.querySelector("link")?.textContent || "",
+        audioUrl: item.querySelector("enclosure")?.getAttribute("url") || "",
       }));
 
       setEpisodes(items);
@@ -47,10 +51,22 @@ export function useEpisodes() {
 
   fetchEpisodes();
 
-  const totalPages = () => Math.ceil(episodes().length / ITEMS_PER_PAGE);
+  const filteredEpisodes = () => {
+    const term = searchTerm().toLowerCase();
+    if (!term) return episodes();
+
+    return episodes().filter(
+      (episode) =>
+        episode.title.toLowerCase().includes(term) ||
+        episode.description.toLowerCase().includes(term)
+    );
+  };
+
+  const totalPages = () =>
+    Math.ceil(filteredEpisodes().length / ITEMS_PER_PAGE);
   const currentEpisodes = () => {
     const start = (currentPage() - 1) * ITEMS_PER_PAGE;
-    return episodes().slice(start, start + ITEMS_PER_PAGE);
+    return filteredEpisodes().slice(start, start + ITEMS_PER_PAGE);
   };
 
   return {
@@ -59,5 +75,9 @@ export function useEpisodes() {
     currentPage,
     setCurrentPage,
     totalPages,
+    searchTerm,
+    setSearchTerm,
+    currentPlaying,
+    setCurrentPlaying,
   };
 }
