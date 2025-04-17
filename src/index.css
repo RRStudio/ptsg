@@ -2,12 +2,6 @@
 	font-family: Noto Sans Hebrew, sans-serif, system-ui;
 	color-scheme: light dark;
 	direction: rtl;
-}
-
-body,
-#root {
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
+	background: var(--colors-neutral-0);
+	color: var(--colors-neutral-900);
 }

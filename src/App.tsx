@@ -23,7 +23,7 @@ import Link from "./Link";
 // TODO: mobile
 export default function App() {
 	return (
-		<div class="w-full h-full p-8 flex justify-center bg-neutral-0 text-neutral-900">
+		<div class="w-full h-full p-8 flex justify-center">
 			<div class="flex flex-col items-center gap-12">
 				<div class="w-full flex justify-between items-center gap-8">
 					<div class="flex justify-center items-center gap-8">
