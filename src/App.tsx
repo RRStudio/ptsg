@@ -24,7 +24,7 @@ import Link from "./Link";
 export default function App() {
 	return (
 		<div class="w-full p-8 flex justify-center">
-			<div class="flex flex-col items-center gap-8">
+			<div class="flex flex-col items-center gap-12">
 				<div class="w-full flex justify-between items-center gap-8">
 					<div class="flex justify-center items-center gap-8">
 						<a href="/">
@@ -34,7 +34,6 @@ export default function App() {
 						<Link href="/episodes">פרקים</Link>
 						<Link href="/episodes">צור קשר</Link>
 					</div>
-					<div />
 					<div class="flex gap-3">
 						<IconLink
 							icon="i-fa6-brands-telegram"
@@ -46,16 +45,11 @@ export default function App() {
 						/>
 					</div>
 				</div>
-				<h1 class="text-5xl font-bold text-center m-0">
-					הפודקאסט היחיד שבו זיבולי שכל
-					<br />
-					זה חוקי.
-				</h1>
-				<h2 class="text-2xl text-center">
-					פותחים סוגריים הוא פודקאסט שבועי על כל מה שלא טכני בהייטק (ואולי גם
-					כן).
-				</h2>
+				<h1 class="text-7xl font-900 text-center m-0">כל מה שלא טכני בהייטק</h1>
 				<p class="text-xl text-center">
+					<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
+					שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
+					<br />
 					<Link href="/about" class="underline">
 						אנחנו
 					</Link>{" "}

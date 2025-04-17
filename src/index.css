@@ -3,26 +3,11 @@
 	color-scheme: light dark;
 	direction: rtl;
 	background: var(--bg);
+	color: var(--fg);
 
 	--primary: #fc5185;
 	--secondary: #3fc1c9;
 	--dim: #1f4168;
 	--fg: #fffcf6;
 	--bg: #0a0a0a;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 900;
-	color: var(--fg);
-}
-
-p,
-span {
-	font-weight: normal;
-	color: var(--fg);
 }
