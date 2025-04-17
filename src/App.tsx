@@ -1,5 +1,5 @@
 import logo from "./assets/ptsg_logo.svg";
-import Button from "./Button";
+import ButtonLink from "./ButtonLink";
 import IconLink from "./IconLink";
 import Link from "./Link";
 
@@ -50,19 +50,15 @@ export default function App() {
 					<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
 					שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
 					<br />
-					<Link href="/about" class="underline">
+					<Link type="inline-link" href="/about">
 						אנחנו
 					</Link>{" "}
 					נענה על השאלות שלכם, וניתן את התשובות הנכונות (והלא נכונות) - כדאי לכם
 					להקשיב לנו, כי ככה.
 				</p>
-				<Button
-					onClick={() =>
-						window.open("https://forms.gle/bRmy3ycbKwPto4dT8", "_blank")
-					}
-				>
+				<ButtonLink href="https://forms.gle/bRmy3ycbKwPto4dT8">
 					שאל אותנו שאלה
-				</Button>
+				</ButtonLink>
 			</div>
 		</div>
 	);

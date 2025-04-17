@@ -10,10 +10,7 @@ export default function IconLink(props: IconLinkProps) {
 			href={props.href}
 			class={`w-6 h-6 text-neutral-400 cursor-pointer hover:text-neutral-900 transition-color duration-200 ${props.class}`}
 		>
-			<div
-				class={`${props.icon} w-full h-full`}
-				onClick={() => window.open(props.href, "_blank")}
-			></div>
+			<div class={`${props.icon} w-full h-full`} />
 		</a>
 	);
 }
