@@ -4,7 +4,9 @@ import PlatformLink from "../PlatformLink";
 function Hero() {
   return (
     <>
-      <h1 class="text-8xl font-900 text-center m-0">כל מה שלא טכני בהייטק</h1>
+      <h1 class="text-8xl font-900 text-center m-0 pt-12">
+        כל מה שלא טכני בהייטק
+      </h1>
 
       <p class="text-xl text-center">
         <span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט

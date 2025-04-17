@@ -9,8 +9,8 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div class="w-full h-full p-8 flex flex-col items-center gap-12">
-      <div class="w-full flex justify-between items-center gap-8">
+    <div class="w-full h-full p-8 flex flex-col items-center">
+      <div class="w-full max-w-4xl flex justify-center items-center gap-8">
         <div class="flex justify-center items-center gap-8">
           <a href="/">
             <img src={logo} width="240" height="240" alt="Logo" />
