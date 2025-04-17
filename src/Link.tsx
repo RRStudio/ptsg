@@ -6,7 +6,7 @@ export default function Link(props: LinkProps) {
 	return (
 		<a
 			{...props}
-			class={`text-white text-md font-bold hover:brightness-80 transition-brightness duration-100 ${props.class}`}
+			class={`text-neutral-400 text-md font-bold hover:text-neutral-900 transition-color duration-200 ${props.class}`}
 		/>
 	);
 }

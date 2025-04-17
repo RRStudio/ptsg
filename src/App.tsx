@@ -23,12 +23,12 @@ import Link from "./Link";
 // TODO: mobile
 export default function App() {
 	return (
-		<div class="w-full p-8 flex justify-center">
+		<div class="w-full h-full p-8 flex justify-center bg-neutral-0 text-neutral-900">
 			<div class="flex flex-col items-center gap-12">
 				<div class="w-full flex justify-between items-center gap-8">
 					<div class="flex justify-center items-center gap-8">
 						<a href="/">
-							<img src={logo} width="200" height="200" alt="Logo" />
+							<img src={logo} width="240" height="240" alt="Logo" />
 						</a>
 						<Link href="/about">אודות</Link>
 						<Link href="/episodes">פרקים</Link>
@@ -45,7 +45,7 @@ export default function App() {
 						/>
 					</div>
 				</div>
-				<h1 class="text-7xl font-900 text-center m-0">כל מה שלא טכני בהייטק</h1>
+				<h1 class="text-8xl font-900 text-center m-0">כל מה שלא טכני בהייטק</h1>
 				<p class="text-xl text-center">
 					<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
 					שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
