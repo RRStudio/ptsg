@@ -4,7 +4,7 @@ import IconLink from "./IconLink";
 import Link from "./Link";
 
 // TODO: navigation menu
-// TODO: embedded google form
+// TODO: embedded google form: https://forms.gle/bRmy3ycbKwPto4dT8
 // TODO: match google form colors
 // TODO: icon: telegram
 // TODO: icon: facebook
@@ -32,7 +32,8 @@ export default function App() {
 						</a>
 						<Link href="/about">אודות</Link>
 						<Link href="/episodes">פרקים</Link>
-						<Link href="/episodes">צור קשר</Link>
+						<Link href="/ask">שאל אותנו שאלה</Link>
+						<Link href="/contact">צור קשר</Link>
 					</div>
 					<div class="flex gap-3">
 						<IconLink
@@ -50,15 +51,15 @@ export default function App() {
 					<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
 					שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
 					<br />
-					<Link type="inline-link" href="/about">
+					<Link style="inline-link" href="/about">
 						אנחנו
 					</Link>{" "}
 					נענה על השאלות שלכם, וניתן את התשובות הנכונות (והלא נכונות) - כדאי לכם
 					להקשיב לנו, כי ככה.
 				</p>
-				<ButtonLink href="https://forms.gle/bRmy3ycbKwPto4dT8">
+				<Link style="button" href="/ask">
 					שאל אותנו שאלה
-				</ButtonLink>
+				</Link>
 			</div>
 		</div>
 	);
