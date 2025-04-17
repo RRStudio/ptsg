@@ -15,9 +15,14 @@ export default function Link({ style = "link", ...props }: LinkProps) {
 			case "inline-link":
 				return `${link} text-neutral-900`;
 			case "button":
-				return "bg-none border-2 border-current rounded-lg text-neutral-400 font-bold text-lg px-5 py-3 cursor-pointer hover:bg-neutral-900 hover:border-neutral-900 hover:text-neutral-0 transition-all duration-200";
+				return "bg-primary rounded-lg text-neutral-0 font-bold text-lg px-5 py-3 cursor-pointer hover:brightness-80 transition-brightness duration-200";
 		}
 	}
 
-	return <a {...props} class={`${getClass()} ${props.class}`} />;
+	return (
+		<a
+			{...props}
+			class={`${getClass()} text-center w-max flex-grow-0 ${props.class}`}
+		/>
+	);
 }

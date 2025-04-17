@@ -35,6 +35,7 @@ export default function App() {
 						<Link href="/ask">שאל אותנו שאלה</Link>
 						<Link href="/contact">צור קשר</Link>
 					</div>
+
 					<div class="flex gap-3">
 						<IconLink
 							icon="i-fa6-brands-telegram"
@@ -46,7 +47,9 @@ export default function App() {
 						/>
 					</div>
 				</div>
+
 				<h1 class="text-8xl font-900 text-center m-0">כל מה שלא טכני בהייטק</h1>
+
 				<p class="text-xl text-center">
 					<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
 					שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
@@ -57,9 +60,13 @@ export default function App() {
 					נענה על השאלות שלכם, וניתן את התשובות הנכונות (והלא נכונות) - כדאי לכם
 					להקשיב לנו, כי ככה.
 				</p>
-				<Link style="button" href="/ask">
-					שאל אותנו שאלה
-				</Link>
+
+				<div class="flex flex-col items-center gap-3">
+					<span class="text-xl font-bold">יש לך שאלה לרון ורועי?</span>
+					<Link style="button" href="/ask">
+						שאל אותנו שאלה
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
