@@ -39,9 +39,9 @@ function TopNav() {
 				<a href="/">
 					<img src={logo} width="240" height="240" alt="Logo" />
 				</a>
-				<Link href="/about">אודות</Link>
 				<Link href="/episodes">פרקים</Link>
 				<Link href="/ask">שאל אותנו שאלה</Link>
+				<Link href="/about">אודות</Link>
 				<Link href="/contact">צור קשר</Link>
 			</div>
 
