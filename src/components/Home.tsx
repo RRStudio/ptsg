@@ -1,32 +1,6 @@
 import Link from "../Link";
 import PlatformLink from "../PlatformLink";
-
-function Hero() {
-	return (
-		<>
-			<h1 class="text-8xl font-900 text-center m-0 pt-12">
-				כל מה שלא טכני בהייטק
-			</h1>
-
-			<p class="text-xl text-center">
-				<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
-				שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
-				<br />
-				<Link variant="inline-link" href="/about">
-					אנחנו
-				</Link>{" "}
-				נענה על השאלות שלכם, וניתן את התשובות הנכונות (והלא נכונות) - כדאי לכם
-				להקשיב לנו, כי ככה.
-			</p>
-
-			<div class="flex items-center gap-10" dir="ltr">
-				<PlatformLink platform="spotify" />
-				<PlatformLink platform="apple" />
-				<PlatformLink platform="youtube" />
-			</div>
-		</>
-	);
-}
+import Hero from "./Hero";
 
 function AskUs() {
 	return (
@@ -40,8 +14,25 @@ function AskUs() {
 export default function Home() {
 	return (
 		<div class="flex flex-col items-center gap-12">
-			<Hero />
+			<Hero title="כל מה שלא טכני בהייטק">
+				<span class="text-primary font-bold">פותחים סוגריים</span> הוא פודקאסט
+				שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
+				<br />
+				<Link variant="inline-link" href="/about">
+					אנחנו
+				</Link>{" "}
+				נענה על השאלות שלכם, וניתן את התשובות הנכונות (והלא נכונות) - כדאי לכם
+				להקשיב לנו, כי ככה.
+			</Hero>
+
+			<div class="flex items-center gap-10" dir="ltr">
+				<PlatformLink platform="spotify" />
+				<PlatformLink platform="apple" />
+				<PlatformLink platform="youtube" />
+			</div>
+
 			<div class="h-10" />
+
 			<AskUs />
 		</div>
 	);

@@ -1,5 +1,5 @@
 import { A } from "@solidjs/router";
-import type { JSX } from "solid-js/jsx-runtime";
+import type { JSX } from "solid-js";
 
 export type LinkProps = {
 	variant?: "link" | "inline-link" | "button";

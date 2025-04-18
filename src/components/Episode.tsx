@@ -35,7 +35,7 @@ export default function EpisodeComponent({
 				class="w-32 h-32 object-cover rounded-lg"
 			/>
 			<div class="flex-1">
-				<h2 class="text-2xl font-bold mb-2">{episode.title}</h2>
+				<h2 class="text-2xl font-900 mb-2">{episode.title}</h2>
 				<div
 					class={`text-neutral-600 prose prose-neutral ${
 						expanded ? "" : "line-clamp-3"
