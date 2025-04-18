@@ -60,7 +60,7 @@ export default function Episodes() {
 
   return (
     <div class="w-full h-full flex flex-col items-center gap-8">
-      <h1 class="text-4xl font-900 text-center">פרקים</h1>
+      <div class="text-4xl font-900 text-center">פרקים</div>
 
       <form onSubmit={handleSearch} class="w-full max-w-4xl flex gap-2">
         <input
