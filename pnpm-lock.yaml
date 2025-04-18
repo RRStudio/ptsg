@@ -14,6 +14,9 @@ importers:
       '@unocss/reset':
         specifier: 66.1.0-beta.11
         version: 66.1.0-beta.11
+      dompurify:
+        specifier: ^3.2.5
+        version: 3.2.5
       solid-js:
         specifier: ^1.9.5
         version: 1.9.5
@@ -504,6 +507,9 @@ packages:
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
   '@unocss/astro@66.1.0-beta.11':
     resolution: {integrity: sha512-Ff7Ot84xfCVnJZh7QEK5Zw4d56Rjc8O6vttZ4sGPU4g+Tbb1RgUDN8bhLSImh1Jm+ZL6TpY+9Kan7ivAoiqXTQ==}
     peerDependencies:
@@ -699,6 +705,9 @@ packages:
 
   destr@2.0.5:
     resolution: {integrity: sha512-ugFTXCtDZunbzasqBxrK93Ik/DRYsO6S/fedkWEMKqt04xZ4csmnmwGDBAb07QWNaGMAmnTIemsYZCksjATwsA==}
+
+  dompurify@3.2.5:
+    resolution: {integrity: sha512-mLPd29uoRe9HpvwP2TxClGQBzGXeEC/we/q+bFlmPPmj2p2Ugl3r6ATu/UU1v77DXNcehiBg9zsr1dREyA/dJQ==}
 
   duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
@@ -1420,6 +1429,9 @@ snapshots:
 
   '@types/estree@1.0.7': {}
 
+  '@types/trusted-types@2.0.7':
+    optional: true
+
   '@unocss/astro@66.1.0-beta.11(vite@6.2.6(jiti@2.4.2))(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@unocss/core': 66.1.0-beta.11
@@ -1701,6 +1713,10 @@ snapshots:
   defu@6.1.4: {}
 
   destr@2.0.5: {}
+
+  dompurify@3.2.5:
+    optionalDependencies:
+      '@types/trusted-types': 2.0.7
 
   duplexer@0.1.2: {}
 

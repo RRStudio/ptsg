@@ -1,6 +1,6 @@
-import { For, Show, createSignal, onCleanup } from "solid-js";
-import logo from "../assets/ptsg.png";
-import { useEpisodes } from "../services/feed";
+import { For, Show, onCleanup } from "solid-js";
+import { type Episode, useEpisodes } from "../services/feed";
+import EpisodeComponent from "./Episode";
 
 export default function Episodes() {
 	const {
@@ -15,10 +15,7 @@ export default function Episodes() {
 		setCurrentPlaying,
 	} = useEpisodes();
 
-	const [expandedEpisode, setExpandedEpisode] = createSignal<string | null>(
-		null,
-	);
-	let searchTimeout: number | null = null;
+	const isPlaying = (episode: Episode) => currentPlaying() === episode.audioUrl;
 
 	const handleNextPage = () => {
 		setCurrentPage((p) => Math.min(totalPages(), p + 1));
@@ -30,6 +27,7 @@ export default function Episodes() {
 		setCurrentPage(1);
 	};
 
+	let searchTimeout: number | null = null;
 	const handleSearchInput = (value: string) => {
 		if (searchTimeout) {
 			window.clearTimeout(searchTimeout);
@@ -47,8 +45,8 @@ export default function Episodes() {
 		}
 	});
 
-	const handleEpisodeClick = (episode: { audioUrl: string; title: string }) => {
-		if (currentPlaying() === episode.audioUrl) {
+	const handleEpisodeClick = (episode: Episode) => {
+		if (isPlaying(episode)) {
 			setCurrentPlaying(null);
 			setExpandedEpisode(null);
 		} else {
@@ -59,8 +57,6 @@ export default function Episodes() {
 
 	return (
 		<div class="w-full h-full flex flex-col items-center gap-8">
-			<div class="text-4xl font-900 text-center">פרקים</div>
-
 			<form onSubmit={handleSearch} class="w-full max-w-4xl flex gap-2">
 				<input
 					type="text"
@@ -84,48 +80,14 @@ export default function Episodes() {
 					<div class="w-full max-w-4xl grid grid-cols-1 gap-4">
 						<For each={episodes()}>
 							{(episode) => (
-								<div
-									class="flex gap-6 p-6 rounded-lg hover:bg-neutral-100 transition-colors cursor-pointer"
-									onKeyPress={(e) => {
-										if (e.key === " ") {
-											handleEpisodeClick(episode);
-										}
+								<EpisodeComponent
+									episode={episode}
+									expanded={isPlaying(episode)}
+									onEnded={() => {
+										setCurrentPlaying(null);
 									}}
 									onClick={() => handleEpisodeClick(episode)}
-								>
-									<img
-										src={logo}
-										alt={episode.title}
-										class="w-32 h-32 object-cover rounded-lg"
-									/>
-									<div class="flex-1">
-										<h2 class="text-2xl font-bold mb-2">{episode.title}</h2>
-										<div
-											class={`text-neutral-600 prose prose-neutral ${
-												expandedEpisode() === episode.audioUrl
-													? ""
-													: "line-clamp-3"
-											}`}
-											innerHTML={episode.description}
-										/>
-										<p class="text-sm text-neutral-400 mt-2">{episode.date}</p>
-										<Show when={currentPlaying() === episode.audioUrl}>
-											<div class="mt-4">
-												<audio
-													src={episode.audioUrl}
-													controls
-													class="w-full"
-													onEnded={() => {
-														setCurrentPlaying(null);
-														setExpandedEpisode(null);
-													}}
-												>
-													<track kind="captions" />
-												</audio>
-											</div>
-										</Show>
-									</div>
-								</div>
+								/>
 							)}
 						</For>
 					</div>
