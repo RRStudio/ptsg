@@ -12,6 +12,7 @@ import Layout from "./components/Layout";
 // TODO: footer
 // TODO: rss link
 // TODO: copyright w/ current year
+// TODO: content: first person
 // TODO: content
 // TODO: laptop
 // TODO: mobile

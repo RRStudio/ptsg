@@ -32,6 +32,13 @@ export default function About() {
 				<Hero title="תכיר את רון ורועי">
 					<div class="flex flex-col items-center gap-8">
 						<span class="text-4xl">יש לך שאלה לרון ורועי?</span>
+						<p class="text-xl">
+							ייצרנו את{" "}
+							<span class="text-primary font-bold">פותחים סוגריים</span> כדי
+							לעזור למפתחים לקבל פרספקרטיבות שונות על נושאים שנויים במחלוקת, בכל
+							מה שלא טכנאי בהייטק. אנחנו כאן בשביל להחכים, להצחיק (גם אם לא הולך
+							לנו) ולהעביר לכם את הפקקים, אבל בעיקר בשביל להצחיק.
+						</p>
 						<Link variant="button" href="/ask">
 							שאל אותנו שאלה
 						</Link>
