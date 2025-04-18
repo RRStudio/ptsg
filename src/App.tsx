@@ -3,7 +3,6 @@ import Home from "./components/Home";
 import Episodes from "./components/Episodes";
 import Ask from "./components/Ask";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Layout from "./components/Layout";
 
 // TODO: navigation menu
@@ -30,7 +29,6 @@ export default function App() {
         <Route path="/episodes" component={Episodes} />
         <Route path="/ask" component={Ask} />
         <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
       </Route>
     </Router>
   );

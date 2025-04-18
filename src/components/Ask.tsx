@@ -6,8 +6,7 @@ export default function Ask() {
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSeccLcjzR9548odDiVlOQc9PAGLYgDNdzMzhAhj7Wo5rPAkrQ/viewform?embedded=true"
           width="100%"
-          height="100%"
-          style="border: none;"
+          style="border: none; height: 1941px !important;"
           class="rounded-lg shadow-lg"
         >
           טוען...
