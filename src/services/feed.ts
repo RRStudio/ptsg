@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import testRss from "../assets/test_rss.xml?raw";
 
 export type Episode = {
   title: string;
@@ -28,8 +29,11 @@ export function useEpisodes() {
 
   async function fetchEpisodes() {
     try {
-      const response = await fetch("https://softskills.audio/feed.xml");
-      const text = await response.text();
+      const isDev = import.meta.env.DEV;
+      const text = isDev
+        ? testRss
+        : await (await fetch("https://feeds.transistor.fm/ptsgdev")).text();
+
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, "text/xml");
 
