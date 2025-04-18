@@ -28,12 +28,14 @@ function Pic({ name, src, description }: PicProps) {
 export default function About() {
 	return (
 		<div class="w-full h-full flex justify-center">
-			<div class="w-full flex flex-col items-center gap-32">
+			<div class="w-full flex flex-col items-center gap-24">
 				<Hero title="תכיר את רון ורועי">
-					<span class="text-4xl mb-8">יש לך שאלה לרון ורועי?</span>
-					<Link variant="button" href="/ask">
-						שאל אותנו שאלה
-					</Link>
+					<div class="flex flex-col items-center gap-8">
+						<span class="text-4xl">יש לך שאלה לרון ורועי?</span>
+						<Link variant="button" href="/ask">
+							שאל אותנו שאלה
+						</Link>
+					</div>
 				</Hero>
 
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
