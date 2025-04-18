@@ -5,13 +5,12 @@ import Episodes from "./components/Episodes";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
 
+// TODO: 3 latest episodes on home page
+// TODO: single episode page
 // TODO: match google form colors
 // TODO: about us
 // TODO: footer
 // TODO: copyright w/ current year
-// TODO: rss lint
-// TODO: episodes
-// TODO: single episode page
 // TODO: content
 // TODO: laptop
 // TODO: mobile

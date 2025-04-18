@@ -17,23 +17,13 @@ export default function Episodes() {
 
 	const isPlaying = (episode: Episode) => currentPlaying() === episode.audioUrl;
 
-	const handleNextPage = () => {
-		setCurrentPage((p) => Math.min(totalPages(), p + 1));
-		window.scrollTo({ top: 0, behavior: "smooth" });
-	};
-
-	const handleSearch = (e: Event) => {
-		e.preventDefault();
-		setCurrentPage(1);
-	};
-
 	let searchTimeout: number | null = null;
 	const handleSearchInput = (value: string) => {
 		if (searchTimeout) {
-			window.clearTimeout(searchTimeout);
+			clearTimeout(searchTimeout);
 		}
 
-		searchTimeout = window.setTimeout(() => {
+		searchTimeout = setTimeout(() => {
 			setSearchTerm(value);
 			setCurrentPage(1);
 		}, 300);
@@ -41,29 +31,28 @@ export default function Episodes() {
 
 	onCleanup(() => {
 		if (searchTimeout) {
-			window.clearTimeout(searchTimeout);
+			clearTimeout(searchTimeout);
 		}
 	});
 
 	const handleEpisodeClick = (episode: Episode) => {
-		if (isPlaying(episode)) {
-			setCurrentPlaying(null);
-			setExpandedEpisode(null);
-		} else {
-			setCurrentPlaying(episode.audioUrl);
-			setExpandedEpisode(episode.audioUrl);
-		}
+		setCurrentPlaying(isPlaying(episode) ? null : episode.audioUrl);
 	};
 
 	return (
 		<div class="w-full h-full flex flex-col items-center gap-8">
-			<form onSubmit={handleSearch} class="w-full max-w-4xl flex gap-2">
+			<form
+				class="w-full max-w-4xl flex gap-2"
+				onSubmit={(e) => {
+					e.preventDefault();
+					setCurrentPage(1);
+				}}
+			>
 				<input
-					type="text"
+					class="flex-1 px-4 py-2 rounded-lg border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+					placeholder="חיפוש פרקים..."
 					value={searchTerm()}
 					onInput={(e) => handleSearchInput(e.currentTarget.value)}
-					placeholder="חיפוש פרקים..."
-					class="flex-1 px-4 py-2 rounded-lg border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
 				/>
 			</form>
 
@@ -107,7 +96,10 @@ export default function Episodes() {
 							</span>
 							<button
 								type="button"
-								onClick={handleNextPage}
+								onClick={() => {
+									setCurrentPage((p) => Math.min(totalPages(), p + 1));
+									window.scrollTo({ top: 0, behavior: "smooth" });
+								}}
 								disabled={currentPage() === totalPages()}
 								class="px-4 py-2 rounded-lg bg-neutral-100 hover:bg-neutral-200 disabled:opacity-50"
 							>
