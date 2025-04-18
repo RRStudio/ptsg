@@ -1,0 +1,143 @@
+
+<?xml-stylesheet href="stylesheet.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+    xmlns:podcast="https://podcastindex.org/namespace/1.0">
+    <channel>
+        <atom:link rel="self" type="application/atom+xml" href="https://feeds.transistor.fm/ptsgdev"
+            title="MP3 Audio" />
+        <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+        <podcast:podping usesPodping="true" />
+        <title>פותחים סוגריים</title>
+        <generator>Transistor (https://transistor.fm)</generator>
+        <itunes:new-feed-url>https://feeds.transistor.fm/ptsgdev</itunes:new-feed-url>
+        <description>פותחים סוגריים הוא פודקאסט על כל מה שלא טכני (ולפעמים גם כן) בעולם ההייטק.
+            רועי ורון משוחחים בגובה העיניים על החיים בתוך ומסביב לעולם הפיתוח: רגעים של ״מה לעזאזל
+            אני עושה פה״, שיחות מסדרון על קוד פתוח, דרמות בקוד ריוויו – וכל מה שביניהם.
+            בכל פרק הם יענו על שאלות מהקהל וידברו על הדברים שכולנו מרגישים, אבל לא תמיד מדברים
+            עליהם.
+
+            טלגרם: https://t.me/ptsgdev
+            פייסבוק: https://www.facebook.com/groups/ptsgdev</description>
+        <copyright>© 2025 רועי ורון שביט</copyright>
+        <podcast:guid>c4b3b1e7-a507-5018-ad24-309dd22d05b4</podcast:guid>
+        <podcast:locked owner="projects@royshavit.com">no</podcast:locked>
+        <language>he</language>
+        <pubDate>Fri, 18 Apr 2025 10:30:15 +0300</pubDate>
+        <lastBuildDate>Fri, 18 Apr 2025 10:31:13 +0300</lastBuildDate>
+        <image>
+            <url>
+                https://img.transistor.fm/wc7zTF5nqZt7bAdBsrXUVjGs0uaqhNurnT8TfSSxV0Y/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zMGZh/MGUwZmJkOGJlZDlk/ODg0ZTIwODc0MzEy/ZTU0Mi5wbmc.jpg</url>
+            <title>פותחים סוגריים</title>
+        </image>
+        <itunes:category text="Technology" />
+        <itunes:category text="Leisure" />
+        <itunes:type>episodic</itunes:type>
+        <itunes:author>רועי ורון שביט</itunes:author>
+        <itunes:image
+            href="https://img.transistor.fm/wc7zTF5nqZt7bAdBsrXUVjGs0uaqhNurnT8TfSSxV0Y/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zMGZh/MGUwZmJkOGJlZDlk/ODg0ZTIwODc0MzEy/ZTU0Mi5wbmc.jpg" />
+        <itunes:summary>פותחים סוגריים הוא פודקאסט על כל מה שלא טכני (ולפעמים גם כן) בעולם ההייטק.
+            רועי ורון משוחחים בגובה העיניים על החיים בתוך ומסביב לעולם הפיתוח: רגעים של ״מה לעזאזל
+            אני עושה פה״, שיחות מסדרון על קוד פתוח, דרמות בקוד ריוויו – וכל מה שביניהם.
+            בכל פרק הם יענו על שאלות מהקהל וידברו על הדברים שכולנו מרגישים, אבל לא תמיד מדברים
+            עליהם.
+
+            טלגרם: https://t.me/ptsgdev
+            פייסבוק: https://www.facebook.com/groups/ptsgdev</itunes:summary>
+        <itunes:subtitle>פותחים סוגריים הוא פודקאסט על כל מה שלא טכני (ולפעמים גם כן) בעולם ההייטק.</itunes:subtitle>
+        <itunes:keywords>הייטק, פיתוח, תוכנה, קריירה, שיחה, קפה, ג'וניור, סניור, דינמיקה, תרבות,
+            צוות, עבודה, פיתוח, טיפים, מדברים, tech, dev, junior, senior, dynamics, career, tips,
+            dilemma, software, culture</itunes:keywords>
+        <itunes:owner>
+            <itunes:name>Roy Shavit</itunes:name>
+        </itunes:owner>
+        <itunes:complete>No</itunes:complete>
+        <itunes:explicit>No</itunes:explicit>
+        <item>
+            <title>פרק 3: נמאס מחפירות בסלאק ו"זה כולה להוסיף כפתור"</title>
+            <itunes:episode>3</itunes:episode>
+            <podcast:episode>3</podcast:episode>
+            <itunes:title>פרק 3: נמאס מחפירות בסלאק ו"זה כולה להוסיף כפתור"</itunes:title>
+            <itunes:episodeType>full</itunes:episodeType>
+            <guid isPermaLink="false">5e1d928c-5aaf-4e5f-85e2-aaf1fc867831</guid>
+            <link>https://share.transistor.fm/s/3f349b02</link>
+            <description>
+        <![CDATA[בפרק הזה רועי ורון יפתחו הכל וידברו על הנושאים הבאים:<br>1. גיימינג (בעיקר בפתיח)<br>2. כמה קבוצות סלאק אפשר לפתוח לפני שזה הופך לקרקס? כל דבר קטן נהיה ‘צ׳אנל’ וזה בלתי נסבל.<br>3. איך אני מסביר לפרודקט למה אי אפשר פשוט ״להוסיף עוד כפתור״?<p>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev </p>]]>
+      </description>
+            <content:encoded>
+        <![CDATA[בפרק הזה רועי ורון יפתחו הכל וידברו על הנושאים הבאים:<br>1. גיימינג (בעיקר בפתיח)<br>2. כמה קבוצות סלאק אפשר לפתוח לפני שזה הופך לקרקס? כל דבר קטן נהיה ‘צ׳אנל’ וזה בלתי נסבל.<br>3. איך אני מסביר לפרודקט למה אי אפשר פשוט ״להוסיף עוד כפתור״?<p>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev </p>]]>
+      </content:encoded>
+            <pubDate>Fri, 18 Apr 2025 10:22:41 +0300</pubDate>
+            <author>רועי ורון שביט</author>
+            <enclosure url="https://media.transistor.fm/3f349b02/cdae2208.mp3" length="23804160"
+                type="audio/mpeg" />
+            <itunes:author>רועי ורון שביט</itunes:author>
+            <itunes:duration>1487</itunes:duration>
+            <itunes:summary>
+        <![CDATA[בפרק הזה רועי ורון יפתחו הכל וידברו על הנושאים הבאים:<br>1. גיימינג (בעיקר בפתיח)<br>2. כמה קבוצות סלאק אפשר לפתוח לפני שזה הופך לקרקס? כל דבר קטן נהיה ‘צ׳אנל’ וזה בלתי נסבל.<br>3. איך אני מסביר לפרודקט למה אי אפשר פשוט ״להוסיף עוד כפתור״?<p>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev </p>]]>
+      </itunes:summary>
+            <itunes:keywords>הייטק, פיתוח, תוכנה, קריירה, שיחה, קפה, ג'וניור, סניור, דינמיקה, תרבות,
+                צוות, עבודה, פיתוח, טיפים, מדברים, tech, dev, junior, senior, dynamics, career,
+                tips, dilemma, software, culture</itunes:keywords>
+            <itunes:explicit>No</itunes:explicit>
+        </item>
+        <item>
+            <title>פרק 2: ג'וניורים ב-2025 וכלוב זהב לעומת הלא נודע</title>
+            <itunes:episode>2</itunes:episode>
+            <podcast:episode>2</podcast:episode>
+            <itunes:title>פרק 2: ג'וניורים ב-2025 וכלוב זהב לעומת הלא נודע</itunes:title>
+            <itunes:episodeType>full</itunes:episodeType>
+            <guid isPermaLink="false">68686980-9e90-44df-a4bd-c885dfe7b0fe</guid>
+            <link>https://share.transistor.fm/s/9ee58661</link>
+            <description>
+        <![CDATA[בפרק הזה רועי ורון יתקפו שתי שאלות חדשות ומעניינות מהמאזינים:<ol><li>איך אפשר למצוא עבודה ראשונה בהייטק ב-2025 כשאין לי עדיין ניסיון אמיתי?</li><li>איך לבחור בין כלוב זהב להרפתקה אל הלא נודע?</li></ol>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev]]>
+      </description>
+            <content:encoded>
+        <![CDATA[בפרק הזה רועי ורון יתקפו שתי שאלות חדשות ומעניינות מהמאזינים:<ol><li>איך אפשר למצוא עבודה ראשונה בהייטק ב-2025 כשאין לי עדיין ניסיון אמיתי?</li><li>איך לבחור בין כלוב זהב להרפתקה אל הלא נודע?</li></ol>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev]]>
+      </content:encoded>
+            <pubDate>Fri, 18 Apr 2025 10:22:28 +0300</pubDate>
+            <author>רועי ורון שביט</author>
+            <enclosure url="https://media.transistor.fm/9ee58661/f98dc342.mp3" length="18651557"
+                type="audio/mpeg" />
+            <itunes:author>רועי ורון שביט</itunes:author>
+            <itunes:duration>1165</itunes:duration>
+            <itunes:summary>
+        <![CDATA[בפרק הזה רועי ורון יתקפו שתי שאלות חדשות ומעניינות מהמאזינים:<ol><li>איך אפשר למצוא עבודה ראשונה בהייטק ב-2025 כשאין לי עדיין ניסיון אמיתי?</li><li>איך לבחור בין כלוב זהב להרפתקה אל הלא נודע?</li></ol>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev]]>
+      </itunes:summary>
+            <itunes:keywords>הייטק, פיתוח, תוכנה, קריירה, שיחה, קפה, ג'וניור, סניור, דינמיקה, תרבות,
+                צוות, עבודה, פיתוח, טיפים, מדברים, tech, dev, junior, senior, dynamics, career,
+                tips, dilemma, software, culture</itunes:keywords>
+            <itunes:explicit>No</itunes:explicit>
+        </item>
+        <item>
+            <title>פרק 1: שאלות טיפשיות בעבודה והאם בינה מלאכותית תחליף אותנו</title>
+            <itunes:episode>1</itunes:episode>
+            <podcast:episode>1</podcast:episode>
+            <itunes:title>פרק 1: שאלות טיפשיות בעבודה והאם בינה מלאכותית תחליף אותנו</itunes:title>
+            <itunes:episodeType>full</itunes:episodeType>
+            <guid isPermaLink="false">97665484-060c-4d20-b3f7-9d6d78b4be44</guid>
+            <link>https://share.transistor.fm/s/3649fcd7</link>
+            <description>
+        <![CDATA[בפרק הראשון של פותחים סוגריים, רועי ורון יציגו את עצמם ויענו על שתי שאלות שקיבלו מהקהל <strong>העצום </strong>שלהם:<ol><li>איך מתמודדים עם שאלות טיפשיות מחברי הצוות בעבודה?</li><li>האם בינה מלאכותית תחליף אותנו?</li></ol>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev]]>
+      </description>
+            <content:encoded>
+        <![CDATA[בפרק הראשון של פותחים סוגריים, רועי ורון יציגו את עצמם ויענו על שתי שאלות שקיבלו מהקהל <strong>העצום </strong>שלהם:<ol><li>איך מתמודדים עם שאלות טיפשיות מחברי הצוות בעבודה?</li><li>האם בינה מלאכותית תחליף אותנו?</li></ol>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev]]>
+      </content:encoded>
+            <pubDate>Fri, 18 Apr 2025 10:22:14 +0300</pubDate>
+            <author>רועי ורון שביט</author>
+            <enclosure url="https://media.transistor.fm/3649fcd7/a7bb57e9.mp3" length="21455665"
+                type="audio/mpeg" />
+            <itunes:author>רועי ורון שביט</itunes:author>
+            <itunes:duration>1340</itunes:duration>
+            <itunes:summary>
+        <![CDATA[בפרק הראשון של פותחים סוגריים, רועי ורון יציגו את עצמם ויענו על שתי שאלות שקיבלו מהקהל <strong>העצום </strong>שלהם:<ol><li>איך מתמודדים עם שאלות טיפשיות מחברי הצוות בעבודה?</li><li>האם בינה מלאכותית תחליף אותנו?</li></ol>רוצים גם לשאול שאלה?<br>טלגרם: https://t.me/ptsgdev<br>פייסבוק: https://www.facebook.com/groups/ptsgdev]]>
+      </itunes:summary>
+            <itunes:keywords>הייטק, פיתוח, תוכנה, קריירה, שיחה, קפה, ג'וניור, סניור, דינמיקה, תרבות,
+                צוות, עבודה, פיתוח, טיפים, מדברים, tech, dev, junior, senior, dynamics, career,
+                tips, dilemma, software, culture</itunes:keywords>
+            <itunes:explicit>No</itunes:explicit>
+        </item>
+    </channel>
+</rss>
