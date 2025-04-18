@@ -19,7 +19,6 @@ export default function Layout({ children }: LayoutProps) {
           <Link href="/episodes">פרקים</Link>
           <Link href="/ask">שאל אותנו שאלה</Link>
           <Link href="/about">אודות</Link>
-          <Link href="/contact">צור קשר</Link>
         </div>
 
         <div class="flex gap-3">
