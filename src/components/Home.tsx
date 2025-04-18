@@ -20,8 +20,8 @@ function Hero() {
       </p>
 
       <div class="flex items-center gap-10" dir="ltr">
-        <PlatformLink platform="spotify" href="https://spotify.com" />
-        <PlatformLink platform="apple" href="https://podcasts.apple.com" />
+        <PlatformLink platform="spotify" />
+        <PlatformLink platform="apple" />
       </div>
     </>
   );

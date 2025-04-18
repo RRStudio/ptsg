@@ -16,6 +16,9 @@ export default function Episodes() {
   } = useEpisodes();
 
   const [audioRef, setAudioRef] = createSignal<HTMLAudioElement | null>(null);
+  const [expandedEpisode, setExpandedEpisode] = createSignal<string | null>(
+    null
+  );
   let searchTimeout: number | null = null;
 
   const handleNextPage = () => {
@@ -48,18 +51,10 @@ export default function Episodes() {
   const handleEpisodeClick = (episode: { audioUrl: string; title: string }) => {
     if (currentPlaying() === episode.audioUrl) {
       setCurrentPlaying(null);
+      setExpandedEpisode(null);
     } else {
       setCurrentPlaying(episode.audioUrl);
-
-      // Use setTimeout to ensure the audio element is mounted before playing
-      setTimeout(() => {
-        const audio = audioRef();
-        if (audio) {
-          audio.play().catch((error) => {
-            console.error("Error playing audio:", error);
-          });
-        }
-      }, 0);
+      setExpandedEpisode(episode.audioUrl);
     }
   };
 
@@ -101,7 +96,11 @@ export default function Episodes() {
                 <div class="flex-1">
                   <h2 class="text-2xl font-bold mb-2">{episode.title}</h2>
                   <div
-                    class="text-neutral-600 line-clamp-3 prose prose-neutral"
+                    class={`text-neutral-600 prose prose-neutral ${
+                      expandedEpisode() === episode.audioUrl
+                        ? ""
+                        : "line-clamp-3"
+                    }`}
                     innerHTML={episode.description}
                   />
                   <p class="text-sm text-neutral-400 mt-2">{episode.date}</p>
@@ -112,7 +111,10 @@ export default function Episodes() {
                         src={episode.audioUrl}
                         controls
                         class="w-full"
-                        onEnded={() => setCurrentPlaying(null)}
+                        onEnded={() => {
+                          setCurrentPlaying(null);
+                          setExpandedEpisode(null);
+                        }}
                       />
                     </div>
                   </Show>
