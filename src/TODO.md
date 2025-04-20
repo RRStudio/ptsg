@@ -1,0 +1,14 @@
+- [ ] about us
+- [ ] single episode page
+- [ ] 3 latest episodes on home page
+- [ ] consistent name ordering
+- [ ] footer
+- [ ] rss link
+- [ ] copyright w/ current year
+- [ ] content: first person
+- [ ] content
+- [ ] laptop
+- [ ] mobile
+- [ ] deploy somewhere
+- [ ] google analytics: setup
+- [ ] google analytics: log enter/exit pages
