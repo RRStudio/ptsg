@@ -1,6 +1,6 @@
 import { For, Show, onCleanup } from "solid-js";
 import { type Episode, useEpisodes } from "../services/feed";
-import EpisodeComponent from "./Episode";
+import EpisodeComponent from "../components/Episode";
 
 export default function Episodes() {
     const {

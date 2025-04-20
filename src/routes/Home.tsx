@@ -1,6 +1,6 @@
 import Link from "../Link";
 import PlatformLink from "../PlatformLink";
-import Hero from "./Hero";
+import Hero from "../components/Hero";
 
 function AskUs() {
     return (

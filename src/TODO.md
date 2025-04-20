@@ -1,14 +1,19 @@
-- [ ] about us
 - [ ] single episode page
-- [ ] 3 latest episodes on home page
-- [ ] consistent name ordering
+- [ ] home
+  - [ ] 3 latest episodes on home page
+  - [ ] ask us cta
 - [ ] footer
-- [ ] rss link
-- [ ] copyright w/ current year
-- [ ] content: first person
+  - [ ] rss link
+  - [ ] copyright w/ current year
+- [ ] about us
 - [ ] content
-- [ ] laptop
-- [ ] mobile
+  - [ ] consistent name ordering
+  - [ ] first person text
+  - [ ] finish all other content
+- [ ] responsiveness
+  - [ ] laptop
+  - [ ] mobile
 - [ ] deploy somewhere
-- [ ] google analytics: setup
-- [ ] google analytics: log enter/exit pages
+- [ ] google analytics
+  - [ ] setup
+  - [ ] log on enter/exit routes

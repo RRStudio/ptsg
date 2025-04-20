@@ -1,7 +1,7 @@
 import Link from "../Link";
 import ronPhoto from "../assets/ron.jpg";
 import royPhoto from "../assets/roy.png";
-import Hero from "./Hero";
+import Hero from "../components/Hero";
 
 type PicProps = {
     src: string;
