@@ -39,7 +39,31 @@ export default function Layout({ children }: LayoutProps) {
                     </div>
                 </div>
 
-                {children}
+                <div>{children}</div>
+
+                <footer class="pt-32">
+                    <div class="flex flex-col items-center gap-4">
+                        <span>
+                            תאזינו לנו ב
+                            <Link
+                                variant="inline-link"
+                                href="https://github.com/r0nsha/ptsg"
+                            >
+                                Spotify
+                            </Link>
+                        </span>
+                        <span class="text-sm text-neutral-400">
+                            הקוד המזעזע שלנו נמצא ב-
+                            <Link
+                                variant="inline-link"
+                                href="https://github.com/r0nsha/ptsg"
+                            >
+                                GitHub
+                            </Link>
+                            .
+                        </span>
+                    </div>
+                </footer>
             </div>
         </div>
     );

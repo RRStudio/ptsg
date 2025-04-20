@@ -1,6 +1,7 @@
 import type { JSX } from "solid-js";
 
 export type PlatformLinkProps = JSX.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    variant: "button" | "link";
     platform: "spotify" | "apple" | "youtube";
 };
 

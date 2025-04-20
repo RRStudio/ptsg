@@ -1,6 +1,8 @@
 import { createResource } from "solid-js";
 import testRss from "../assets/test_rss.xml?raw";
 
+export const RSS_FEED_URL = "https://feeds.transistor.fm/ptsgdev";
+
 export type Episode = {
     episode: number;
     title: string;
@@ -26,9 +28,7 @@ export function useEpisodes() {
                 const isDev = import.meta.env.DEV;
                 const text = isDev
                     ? testRss
-                    : await (
-                          await fetch("https://feeds.transistor.fm/ptsgdev")
-                      ).text();
+                    : await (await fetch(RSS_FEED_URL)).text();
 
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(text, "text/xml");
