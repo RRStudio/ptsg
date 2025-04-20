@@ -1,4 +1,4 @@
-import ronPhoto from "../assets/ron.png";
+import ronPhoto from "../assets/ron.jpg";
 import royPhoto from "../assets/roy.png";
 import Link from "../Link";
 import Hero from "./Hero";
