@@ -20,14 +20,14 @@ import Layout from "./components/Layout";
 // TODO: google analytics: setup
 // TODO: google analytics: log enter/exit pages
 export default function App() {
-	return (
-		<Router>
-			<Route path="/" component={Layout}>
-				<Route path="/" component={Home} />
-				<Route path="/episodes" component={Episodes} />
-				<Route path="/ask" component={Ask} />
-				<Route path="/about" component={About} />
-			</Route>
-		</Router>
-	);
+    return (
+        <Router>
+            <Route path="/" component={Layout}>
+                <Route path="/" component={Home} />
+                <Route path="/episodes" component={Episodes} />
+                <Route path="/ask" component={Ask} />
+                <Route path="/about" component={About} />
+            </Route>
+        </Router>
+    );
 }
