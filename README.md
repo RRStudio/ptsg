@@ -1,4 +1,4 @@
-The website for [ptsg.dev].
+The website for [ptsg.dev](https://ptsg.dev)
 
 ## Usage
 
