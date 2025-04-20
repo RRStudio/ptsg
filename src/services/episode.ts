@@ -1,4 +1,4 @@
-import { createSignal, onMount } from "solid-js";
+import { createResource, createSignal } from "solid-js";
 import testRss from "../assets/test_rss.xml?raw";
 
 export type Episode = {
@@ -22,16 +22,8 @@ function formatDate(dateString: string): string {
 }
 
 export function useEpisodes() {
-    const [episodes, setEpisodes] = createSignal<Episode[]>([]);
-    const [currentPage, setCurrentPage] = createSignal(1);
-    const [loading, setLoading] = createSignal(true);
-    const [searchTerm, setSearchTerm] = createSignal("");
-    const [currentPlaying, setCurrentPlaying] = createSignal<string | null>(
-        null,
-    );
-
-    onMount(() => {
-        async function fetchEpisodes() {
+    const [episodes] = createResource<Episode[]>(
+        async () => {
             try {
                 const isDev = import.meta.env.DEV;
                 const text = isDev
@@ -61,44 +53,14 @@ export function useEpisodes() {
                         "",
                 }));
 
-                setEpisodes(items);
+                return items;
             } catch (error) {
                 console.error("Error fetching episodes:", error);
-            } finally {
-                setLoading(false);
+                return [];
             }
-        }
+        },
+        { initialValue: [] },
+    );
 
-        fetchEpisodes();
-    });
-
-    const filteredEpisodes = () => {
-        const term = searchTerm().toLowerCase();
-        if (!term) return episodes();
-
-        return episodes().filter(
-            (episode) =>
-                episode.title.toLowerCase().includes(term) ||
-                episode.description.toLowerCase().includes(term),
-        );
-    };
-
-    const totalPages = () =>
-        Math.ceil(filteredEpisodes().length / ITEMS_PER_PAGE);
-    const currentEpisodes = () => {
-        const start = (currentPage() - 1) * ITEMS_PER_PAGE;
-        return filteredEpisodes().slice(start, start + ITEMS_PER_PAGE);
-    };
-
-    return {
-        episodes: currentEpisodes,
-        loading,
-        currentPage,
-        setCurrentPage,
-        totalPages,
-        searchTerm,
-        setSearchTerm,
-        currentPlaying,
-        setCurrentPlaying,
-    };
+    return episodes;
 }

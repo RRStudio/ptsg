@@ -1,4 +1,3 @@
-- [ ] single episode page
 - [ ] home
   - [ ] 3 latest episodes on home page
   - [ ] ask us cta
@@ -17,3 +16,4 @@
 - [ ] google analytics
   - [ ] setup
   - [ ] log on enter/exit routes
+- [ ] single episode page

@@ -1,19 +1,35 @@
-import { For, Show, onCleanup } from "solid-js";
-import { type Episode, useEpisodes } from "../services/episode";
+import { For, Show, Suspense, createSignal, onCleanup } from "solid-js";
 import EpisodeComponent from "../components/Episode";
+import { type Episode, useEpisodes } from "../services/episode";
+
+const ITEMS_PER_PAGE = 10;
 
 export default function Episodes() {
-    const {
-        episodes,
-        loading,
-        currentPage,
-        setCurrentPage,
-        totalPages,
-        searchTerm,
-        setSearchTerm,
-        currentPlaying,
-        setCurrentPlaying,
-    } = useEpisodes();
+    const episodes = useEpisodes();
+
+    const [currentPage, setCurrentPage] = createSignal(1);
+    const [searchTerm, setSearchTerm] = createSignal("");
+    const [currentPlaying, setCurrentPlaying] = createSignal<string | null>(
+        null,
+    );
+
+    const filteredEpisodes = () => {
+        const term = searchTerm().toLowerCase();
+        if (!term) return episodes();
+
+        return episodes().filter(
+            (episode) =>
+                episode.title.toLowerCase().includes(term) ||
+                episode.description.toLowerCase().includes(term),
+        );
+    };
+
+    const totalPages = () =>
+        Math.ceil(filteredEpisodes().length / ITEMS_PER_PAGE);
+    const currentEpisodes = () => {
+        const start = (currentPage() - 1) * ITEMS_PER_PAGE;
+        return filteredEpisodes().slice(start, start + ITEMS_PER_PAGE);
+    };
 
     const isPlaying = (episode: Episode) =>
         currentPlaying() === episode.audioUrl;
@@ -57,9 +73,9 @@ export default function Episodes() {
                 />
             </form>
 
-            <Show when={!loading()} fallback={<div>טוען...</div>}>
+            <Suspense fallback={<div>טוען...</div>}>
                 <Show
-                    when={episodes().length > 0}
+                    when={currentEpisodes().length > 0}
                     fallback={
                         <div class="text-center text-neutral-600">
                             <p class="text-xl">לא נמצאו פרקים</p>
@@ -68,7 +84,7 @@ export default function Episodes() {
                     }
                 >
                     <div class="w-full max-w-4xl grid grid-cols-1 gap-4">
-                        <For each={episodes()}>
+                        <For each={currentEpisodes()}>
                             {(episode) => (
                                 <EpisodeComponent
                                     episode={episode}
@@ -116,7 +132,7 @@ export default function Episodes() {
                         </div>
                     </Show>
                 </Show>
-            </Show>
+            </Suspense>
         </div>
     );
 }
