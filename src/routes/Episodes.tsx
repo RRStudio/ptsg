@@ -1,6 +1,6 @@
-import { For, Show, Suspense, createSignal, onCleanup } from "solid-js";
-import EpisodeComponent from "../components/Episode";
-import { type Episode, useEpisodes } from "../services/episode";
+import { Show, Suspense, createSignal, onCleanup } from "solid-js";
+import { useEpisodes } from "../services/episode";
+import EpisodeList from "../components/EpisodeList";
 
 const ITEMS_PER_PAGE = 10;
 
@@ -9,9 +9,6 @@ export default function Episodes() {
 
     const [currentPage, setCurrentPage] = createSignal(1);
     const [searchTerm, setSearchTerm] = createSignal("");
-    const [currentPlaying, setCurrentPlaying] = createSignal<string | null>(
-        null,
-    );
 
     const filteredEpisodes = () => {
         const term = searchTerm().toLowerCase();
@@ -20,7 +17,7 @@ export default function Episodes() {
         return episodes().filter(
             (episode) =>
                 episode.title.toLowerCase().includes(term) ||
-                episode.description.toLowerCase().includes(term),
+                episode.description.toLowerCase().includes(term)
         );
     };
 
@@ -30,9 +27,6 @@ export default function Episodes() {
         const start = (currentPage() - 1) * ITEMS_PER_PAGE;
         return filteredEpisodes().slice(start, start + ITEMS_PER_PAGE);
     };
-
-    const isPlaying = (episode: Episode) =>
-        currentPlaying() === episode.audioUrl;
 
     let searchTimeout: number | undefined;
     const handleSearchInput = (value: string) => {
@@ -52,10 +46,6 @@ export default function Episodes() {
         }
     });
 
-    const handleEpisodeClick = (episode: Episode) => {
-        setCurrentPlaying(isPlaying(episode) ? null : episode.audioUrl);
-    };
-
     return (
         <div class="w-full h-full flex flex-col items-center gap-8">
             <form
@@ -74,30 +64,7 @@ export default function Episodes() {
             </form>
 
             <Suspense fallback={<div>טוען...</div>}>
-                <Show
-                    when={currentEpisodes().length > 0}
-                    fallback={
-                        <div class="text-center text-neutral-600">
-                            <p class="text-xl">לא נמצאו פרקים</p>
-                            <p class="mt-2">נסה לשנות את מונחי החיפוש</p>
-                        </div>
-                    }
-                >
-                    <div class="w-full max-w-4xl grid grid-cols-1 gap-4">
-                        <For each={currentEpisodes()}>
-                            {(episode) => (
-                                <EpisodeComponent
-                                    episode={episode}
-                                    expanded={() => isPlaying(episode)}
-                                    onEnded={() => {
-                                        setCurrentPlaying(null);
-                                    }}
-                                    onClick={() => handleEpisodeClick(episode)}
-                                />
-                            )}
-                        </For>
-                    </div>
-
+                <EpisodeList episodes={currentEpisodes}>
                     <Show when={totalPages() > 1}>
                         <div class="flex gap-2 mt-8">
                             <button
@@ -131,7 +98,7 @@ export default function Episodes() {
                             </button>
                         </div>
                     </Show>
-                </Show>
+                </EpisodeList>
             </Suspense>
         </div>
     );

@@ -1,4 +1,4 @@
-import { createResource, createSignal } from "solid-js";
+import { createResource } from "solid-js";
 import testRss from "../assets/test_rss.xml?raw";
 
 export type Episode = {
@@ -9,8 +9,6 @@ export type Episode = {
     link: string;
     audioUrl: string;
 };
-
-const ITEMS_PER_PAGE = 10;
 
 function formatDate(dateString: string): string {
     const date = new Date(dateString);

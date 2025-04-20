@@ -31,18 +31,17 @@ export default function About() {
     return (
         <div class="w-full h-ful l flex justify-center">
             <div class="w-full flex flex-col items-center gap-24">
-                <Hero title="תכיר את רון ורועי">
+                <Hero title="תכיר אותנו קצת">
                     <div class="flex flex-col items-center gap-8">
-                        <span class="text-4xl">יש לך שאלה לרון ורועי?</span>
                         <p class="text-xl">
                             יצרנו את{" "}
                             <span class="text-primary font-bold">
                                 פותחים סוגריים
                             </span>{" "}
                             כדי לעזור למפתחים לקבל פרספקרטיבות שונות על נושאים
-                            שנויים במחלוקת, בכל מה שלא טכנאי בהייטק. אנחנו כאן
-                            בשביל להחכים, להצחיק (גם אם לא הולך לנו) ולהעביר לכם
-                            את הפקקים. אבל בעיקר בשביל לענות על השאלות שלכם.
+                            שהם לפעמים שנויים במחלוקת, בכל מה שלא טכנאי בהייטק.
+                            אנחנו כאן בשביל להחכים, להצחיק (גם אם לא הולך לנו)
+                            ולהעביר לכם את הפקקים. אבל בעיקר בשביל להצחיק.
                         </p>
                         <Link variant="button" href="/ask">
                             שאל אותנו שאלה
