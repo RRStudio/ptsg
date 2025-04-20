@@ -43,37 +43,29 @@ export default function Layout({ children }: LayoutProps) {
 
                 <div>{children}</div>
 
-                <footer class="pt-32">
-                    <div class="flex flex-col items-center gap-4">
-                        <div class="flex items-center gap-2">
-                            תאזינו לנו ב
-                            <div class="flex items-center gap-2" dir="ltr">
-                                <PlatformLink
-                                    platform="spotify"
-                                    variant="link"
-                                />
-                                <PlatformLink platform="apple" variant="link" />
-                                <PlatformLink
-                                    platform="youtube"
-                                    variant="link"
-                                />
-                            </div>
-                            או ישירות ב
-                            <Link variant="inline-link" href={RSS_FEED_URL}>
-                                RSS Feed
-                            </Link>
+                <footer class="flex flex-col items-center gap-4 pt-32">
+                    <div class="flex items-center gap-2">
+                        תאזינו לנו ב
+                        <div class="flex items-center gap-2" dir="ltr">
+                            <PlatformLink platform="spotify" variant="link" />
+                            <PlatformLink platform="apple" variant="link" />
+                            <PlatformLink platform="youtube" variant="link" />
                         </div>
-                        <span class="text-sm text-neutral-400">
-                            הקוד המזעזע שלנו נמצא ב-
-                            <Link
-                                variant="inline-link"
-                                href="https://github.com/r0nsha/ptsg"
-                            >
-                                GitHub
-                            </Link>
-                            .
-                        </span>
+                        או ישירות ב
+                        <Link variant="inline-link" href={RSS_FEED_URL}>
+                            RSS Feed
+                        </Link>
                     </div>
+                    <span class="text-sm text-neutral-400">
+                        הקוד המזעזע שלנו נמצא ב-
+                        <Link
+                            variant="inline-link"
+                            href="https://github.com/r0nsha/ptsg"
+                        >
+                            GitHub
+                        </Link>
+                        .
+                    </span>
                 </footer>
             </div>
         </div>
