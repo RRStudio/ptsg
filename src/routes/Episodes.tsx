@@ -72,7 +72,7 @@ export default function Episodes() {
                             {(episode) => (
                                 <EpisodeComponent
                                     episode={episode}
-                                    expanded={isPlaying(episode)}
+                                    expanded={() => isPlaying(episode)}
                                     onEnded={() => {
                                         setCurrentPlaying(null);
                                     }}
