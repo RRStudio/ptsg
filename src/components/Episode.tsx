@@ -28,7 +28,6 @@ export default function EpisodeComponent({
             }}
             onClick={onClick}
         >
-            {/*TODO: show logo from rss feed*/}
             <img
                 src={logo}
                 alt={episode.title}
