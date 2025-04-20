@@ -1,6 +1,6 @@
 import Link from "../Link";
 import ronPhoto from "../assets/ron.jpg";
-import royPhoto from "../assets/roy.png";
+import royPhoto from "../assets/roy.jpg";
 import Hero from "../components/Hero";
 
 type PicProps = {

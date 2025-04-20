@@ -1,7 +1,8 @@
-import { createSignal } from "solid-js";
+import { createSignal, onMount } from "solid-js";
 import testRss from "../assets/test_rss.xml?raw";
 
 export type Episode = {
+    episode: number;
     title: string;
     description: string;
     date: string;
@@ -29,20 +30,25 @@ export function useEpisodes() {
         null,
     );
 
-    async function fetchEpisodes() {
-        try {
-            const isDev = import.meta.env.DEV;
-            const text = isDev
-                ? testRss
-                : await (
-                      await fetch("https://feeds.transistor.fm/ptsgdev")
-                  ).text();
+    onMount(() => {
+        async function fetchEpisodes() {
+            try {
+                const isDev = import.meta.env.DEV;
+                const text = isDev
+                    ? testRss
+                    : await (
+                          await fetch("https://feeds.transistor.fm/ptsgdev")
+                      ).text();
 
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, "text/xml");
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, "text/xml");
 
-            const items = Array.from(doc.querySelectorAll("item")).map(
-                (item) => ({
+                const items: Episode[] = Array.from(
+                    doc.querySelectorAll("item"),
+                ).map((item) => ({
+                    episode: Number.parseInt(
+                        item.querySelector("episode")?.textContent ?? "0",
+                    ),
                     title: item.querySelector("title")?.textContent || "",
                     description:
                         item.querySelector("description")?.textContent || "",
@@ -53,18 +59,18 @@ export function useEpisodes() {
                     audioUrl:
                         item.querySelector("enclosure")?.getAttribute("url") ||
                         "",
-                }),
-            );
+                }));
 
-            setEpisodes(items);
-        } catch (error) {
-            console.error("Error fetching episodes:", error);
-        } finally {
-            setLoading(false);
+                setEpisodes(items);
+            } catch (error) {
+                console.error("Error fetching episodes:", error);
+            } finally {
+                setLoading(false);
+            }
         }
-    }
 
-    fetchEpisodes();
+        fetchEpisodes();
+    });
 
     const filteredEpisodes = () => {
         const term = searchTerm().toLowerCase();
