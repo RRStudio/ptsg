@@ -1,4 +1,4 @@
-import Link from "../Link";
+import Link from "../components/Link";
 import ronPhoto from "../assets/ron.jpg";
 import royPhoto from "../assets/roy.jpg";
 import Hero from "../components/Hero";

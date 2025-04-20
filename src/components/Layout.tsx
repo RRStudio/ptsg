@@ -1,7 +1,9 @@
-import type { JSX } from "solid-js";
-import IconLink from "../IconLink";
-import Link from "../Link";
 import logo from "../assets/ptsg_logo.svg";
+import type { JSX } from "solid-js";
+import IconLink from "../components/IconLink";
+import Link from "../components/Link";
+import PlatformLink from "../components/PlatformLink";
+import { RSS_FEED_URL } from "../services/episode";
 
 type LayoutProps = {
     children?: JSX.Element;
@@ -43,15 +45,24 @@ export default function Layout({ children }: LayoutProps) {
 
                 <footer class="pt-32">
                     <div class="flex flex-col items-center gap-4">
-                        <span>
+                        <div class="flex items-center gap-2">
                             תאזינו לנו ב
-                            <Link
-                                variant="inline-link"
-                                href="https://github.com/r0nsha/ptsg"
-                            >
-                                Spotify
+                            <div class="flex items-center gap-2" dir="ltr">
+                                <PlatformLink
+                                    platform="spotify"
+                                    variant="link"
+                                />
+                                <PlatformLink platform="apple" variant="link" />
+                                <PlatformLink
+                                    platform="youtube"
+                                    variant="link"
+                                />
+                            </div>
+                            או ישירות ב
+                            <Link variant="inline-link" href={RSS_FEED_URL}>
+                                RSS Feed
                             </Link>
-                        </span>
+                        </div>
                         <span class="text-sm text-neutral-400">
                             הקוד המזעזע שלנו נמצא ב-
                             <Link

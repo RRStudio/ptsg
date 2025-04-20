@@ -1,6 +1,3 @@
-- [ ] footer
-  - [ ] rss link
-  - [ ] copyright w/ current year
 - [ ] content
   - [ ] consistent name ordering
   - [ ] first person text

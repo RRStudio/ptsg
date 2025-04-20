@@ -1,5 +1,6 @@
 import { createResource } from "solid-js";
 import testRss from "../assets/test_rss.xml?raw";
+import { formatDate } from "../utils/date";
 
 export const RSS_FEED_URL = "https://feeds.transistor.fm/ptsgdev";
 
@@ -11,15 +12,6 @@ export type Episode = {
     link: string;
     audioUrl: string;
 };
-
-function formatDate(dateString: string): string {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("he-IL", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-    });
-}
 
 export function useEpisodes() {
     const [episodes] = createResource<Episode[]>(

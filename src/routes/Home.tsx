@@ -1,6 +1,6 @@
 import { Suspense } from "solid-js";
-import Link from "../Link";
-import PlatformLink from "../PlatformLink";
+import Link from "../components/Link";
+import PlatformLink from "../components/PlatformLink";
 import Hero from "../components/Hero";
 import EpisodeList from "../components/EpisodeList";
 import { useEpisodes } from "../services/episode";
