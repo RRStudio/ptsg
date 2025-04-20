@@ -1,6 +1,7 @@
 - [ ] content
   - [ ] first person text
   - [ ] finish all other content
+  - [ ] better personal descriptions
 - [ ] responsiveness
   - [ ] laptop
   - [ ] mobile
