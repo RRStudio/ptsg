@@ -1,7 +1,7 @@
 import DOMPurify from "dompurify";
 import { Show } from "solid-js";
 import logo from "../assets/ptsg.png";
-import type { Episode } from "../services/feed";
+import type { Episode } from "../services/episode";
 
 export type EpisodeProps = {
     episode: Episode;

@@ -1,5 +1,5 @@
 import { For, Show, onCleanup } from "solid-js";
-import { type Episode, useEpisodes } from "../services/feed";
+import { type Episode, useEpisodes } from "../services/episode";
 import EpisodeComponent from "../components/Episode";
 
 export default function Episodes() {
@@ -18,7 +18,7 @@ export default function Episodes() {
     const isPlaying = (episode: Episode) =>
         currentPlaying() === episode.audioUrl;
 
-    let searchTimeout: NodeJS.Timeout | null = null;
+    let searchTimeout: number | undefined;
     const handleSearchInput = (value: string) => {
         if (searchTimeout) {
             clearTimeout(searchTimeout);
