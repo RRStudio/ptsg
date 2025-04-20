@@ -1,5 +1,4 @@
 - [ ] content
-  - [ ] consistent name ordering
   - [ ] first person text
   - [ ] finish all other content
 - [ ] responsiveness
