@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
                         </a>
                         <Link href="/">בית</Link>
                         <Link href="/episodes">פרקים</Link>
-                        <Link href="/ask">שאל אותנו שאלה</Link>
+                        <Link href="/ask">שליחת שאלה</Link>
                         <Link href="/about">אודות</Link>
                     </div>
 
@@ -43,7 +43,7 @@ export default function Layout({ children }: LayoutProps) {
 
                 <div>{children}</div>
 
-                <footer class="flex flex-col items-center gap-4 pt-32">
+                <footer class="flex flex-col items-center gap-4 pt-16">
                     <div class="flex items-center gap-2">
                         תאזינו לנו ב
                         <div class="flex items-center gap-2" dir="ltr">

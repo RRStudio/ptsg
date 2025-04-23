@@ -3,8 +3,8 @@ import Hero from "../components/Hero";
 export default function Ask() {
     return (
         <div class="w-full h-full flex flex-col items-center gap-8">
-            <Hero title="רוצה שנענה על השאלה שלך באחד הפרקים?">
-                <span class="text-primary">מלא את הטופס שלמטה 👇</span>
+            <Hero title="רוצים שנענה על השאלה שלכם באחד הפרקים?">
+                <span class="text-primary">מלאו את הטופס שלמטה 👇</span>
             </Hero>
             <iframe
                 title="Google Form"

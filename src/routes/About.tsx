@@ -29,7 +29,7 @@ export default function About() {
   return (
     <div class="w-full h-ful l flex justify-center">
       <div class="w-full flex flex-col items-center gap-24">
-        <Hero title="תכיר אותנו קצת">
+        <Hero title="קצת עלינו">
           <div class="flex flex-col items-center gap-8">
             <p class="text-xl">
               יצרנו את{" "}
@@ -39,7 +39,7 @@ export default function About() {
               (גם אם לא הולך לנו) ולהעביר לכם את הפקקים. אבל בעיקר בשביל להצחיק.
             </p>
             <Link variant="button" href="/ask">
-              שאל אותנו שאלה
+              תשאלו אותנו שאלה
             </Link>
           </div>
         </Hero>
