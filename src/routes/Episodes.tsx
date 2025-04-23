@@ -17,7 +17,7 @@ export default function Episodes() {
         return episodes().filter(
             (episode) =>
                 episode.title.toLowerCase().includes(term) ||
-                episode.description.toLowerCase().includes(term)
+                episode.description.toLowerCase().includes(term),
         );
     };
 
