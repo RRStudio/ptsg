@@ -10,7 +10,7 @@ export default function Home() {
     const trimmedEpisodes = () => episodes().slice(0, 3);
 
     return (
-        <div class="flex flex-col items-center gap-12">
+        <div class="flex flex-col items-center desktop:gap-12 gap-6">
             <Hero title="כל מה שלא טכני בהייטק">
                 <span class="font-bold text-primary">פותחים סוגריים</span> הוא
                 פודקאסט שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
@@ -28,7 +28,7 @@ export default function Home() {
                 <PlatformLink platform="youtube" />
             </div>
 
-            <div class="my-8">
+            <div class="my-10">
                 <div class="flex flex-col items-center gap-3">
                     <span class="font-bold text-xl">
                         יש לכם שאלה לרועי ורון?

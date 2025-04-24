@@ -1,6 +1,18 @@
 - [ ] responsiveness
   - [ ] laptop
+    - [ ] nav
+    - [ ] footer
+    - [ ] home
+    - [ ] episodes
+    - [ ] ask
+    - [ ] about
   - [ ] mobile
+    - [ ] nav: hamburger menu
+    - [ ] footer
+    - [ ] home
+    - [ ] episodes
+    - [ ] ask
+    - [ ] about
 - [ ] deploy somewhere
 - [ ] google analytics
   - [ ] setup

@@ -41,5 +41,11 @@ export default defineConfig({
                 900: "#fffcf6",
             },
         },
+        breakpoint: {
+            mobile: "0rem",
+            tablet: "64rem",
+            laptop: "80rem",
+            desktop: "96rem",
+        },
     },
 });
