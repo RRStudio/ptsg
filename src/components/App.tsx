@@ -1,9 +1,9 @@
 import { Route, Router } from "@solidjs/router";
-import Layout from "./Layout";
 import About from "../routes/About";
 import Ask from "../routes/Ask";
 import Episodes from "../routes/Episodes";
 import Home from "../routes/Home";
+import Layout from "./Layout";
 
 export default function App() {
     return (

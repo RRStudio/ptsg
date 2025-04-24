@@ -30,7 +30,7 @@ export default function Link({
     return (
         <A
             {...props}
-            class={`${getClass()} text-center w-max flex-grow-0 ${props.class || ""}`}
+            class={`${getClass()} w-max flex-grow-0 text-center ${props.class || ""}`}
         >
             {children}
         </A>

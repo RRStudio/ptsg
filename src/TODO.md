@@ -1,4 +1,3 @@
-- [ ] show <audio /> only when episode is open
 - [ ] responsiveness
   - [ ] laptop
   - [ ] mobile

@@ -1,8 +1,8 @@
 import { Suspense } from "solid-js";
+import EpisodeList from "../components/EpisodeList";
+import Hero from "../components/Hero";
 import Link from "../components/Link";
 import PlatformLink from "../components/PlatformLink";
-import Hero from "../components/Hero";
-import EpisodeList from "../components/EpisodeList";
 import { useEpisodes } from "../services/episode";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <div class="flex flex-col items-center gap-12">
             <Hero title="כל מה שלא טכני בהייטק">
-                <span class="text-primary font-bold">פותחים סוגריים</span> הוא
+                <span class="font-bold text-primary">פותחים סוגריים</span> הוא
                 פודקאסט שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
                 <br />
                 <Link variant="inline-link" href="/about">
@@ -30,7 +30,7 @@ export default function Home() {
 
             <div class="my-8">
                 <div class="flex flex-col items-center gap-3">
-                    <span class="text-xl font-bold">
+                    <span class="font-bold text-xl">
                         יש לכם שאלה לרועי ורון?
                     </span>
                     <Link variant="button" href="/ask">
@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <h2 class="text-5xl font-900 text-primary">
+            <h2 class="font-900 text-5xl text-primary">
                 הפרקים האחרונים שלנו...
             </h2>
 

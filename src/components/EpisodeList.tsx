@@ -1,4 +1,4 @@
-import { type Accessor, createSignal, For, type JSX, Show } from "solid-js";
+import { type Accessor, For, type JSX, Show, createSignal } from "solid-js";
 import type { Episode } from "../services/episode";
 import EpisodeComponent from "./Episode";
 
@@ -29,7 +29,7 @@ export default function EpisodeList({ episodes, children }: EpisodesProps) {
                 </div>
             }
         >
-            <div class="w-full max-w-4xl grid grid-cols-1 gap-4">
+            <div class="grid w-full max-w-4xl grid-cols-1 gap-4">
                 <For each={episodes()}>
                     {(episode) => (
                         <EpisodeComponent

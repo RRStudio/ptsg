@@ -20,7 +20,7 @@ export default function EpisodeComponent({
 
     return (
         <div
-            class="flex gap-6 p-6 rounded-lg cursor-pointer hover:bg-neutral-100 transition-colors duration-200"
+            class="flex cursor-pointer gap-6 rounded-lg p-6 transition-colors duration-200 hover:bg-neutral-100"
             onKeyPress={(e) => {
                 if (e.key === " ") {
                     onClick?.();
@@ -31,20 +31,20 @@ export default function EpisodeComponent({
             <img
                 src={logo}
                 alt={episode.title}
-                class="w-32 h-32 object-cover rounded-lg"
+                class="h-32 w-32 rounded-lg object-cover"
             />
             <div class="flex-1">
-                <h2 class="text-2xl font-900 mb-2">{episode.title}</h2>
+                <h2 class="mb-2 font-900 text-2xl">{episode.title}</h2>
                 <div
-                    class={`text-neutral-600 prose prose-neutral ${
+                    class={`prose prose-neutral text-neutral-600 ${
                         expanded() ? "" : "line-clamp-3"
                     }`}
                     innerHTML={description()}
                 />
-                <p class="text-sm text-neutral-400 mt-2">{episode.date}</p>
+                <p class="mt-2 text-neutral-400 text-sm">{episode.date}</p>
                 <Show when={expanded()}>
                     <audio
-                        class="w-full mt-4"
+                        class="mt-4 w-full"
                         src={episode.audioUrl}
                         controls
                         preload="metadata"

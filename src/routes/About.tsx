@@ -1,7 +1,7 @@
-import Link from "../components/Link";
 import ronPhoto from "../assets/ron.jpg";
 import royPhoto from "../assets/roy.jpg";
 import Hero from "../components/Hero";
+import Link from "../components/Link";
 
 type PicProps = {
     src: string;
@@ -15,10 +15,10 @@ function Pic({ name, src, description }: PicProps) {
             <img
                 src={src}
                 alt={name}
-                class="w-70 h-70 rounded-full object-cover border-8 border-primary"
+                class="h-70 w-70 rounded-full border-8 border-primary object-cover"
             />
             <div class="flex flex-col gap-4 text-center">
-                <h2 class="text-4xl font-900">{name}</h2>
+                <h2 class="font-900 text-4xl">{name}</h2>
                 <p class="text-lg text-neutral-400 leading-relaxed">
                     {description}
                 </p>
@@ -29,13 +29,13 @@ function Pic({ name, src, description }: PicProps) {
 
 export default function About() {
     return (
-        <div class="w-full h-ful l flex justify-center">
-            <div class="w-full flex flex-col items-center gap-24">
+        <div class="l flex h-ful w-full justify-center">
+            <div class="flex w-full flex-col items-center gap-24">
                 <Hero title="קצת עלינו">
                     <div class="flex flex-col items-center gap-8">
                         <p class="text-xl">
                             יצרנו את{" "}
-                            <span class="text-primary font-bold">
+                            <span class="font-bold text-primary">
                                 פותחים סוגריים
                             </span>{" "}
                             כדי לעזור למפתחים לקבל פרספקרטיבות שונות על נושאים
@@ -49,7 +49,7 @@ export default function About() {
                     </div>
                 </Hero>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+                <div class="grid w-full grid-cols-1 gap-12 md:grid-cols-2">
                     <Pic
                         src={royPhoto}
                         name="רועי שביט"

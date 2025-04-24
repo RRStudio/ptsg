@@ -1,5 +1,5 @@
-import logo from "../assets/ptsg_logo.svg";
 import type { JSX } from "solid-js";
+import logo from "../assets/ptsg_logo.svg";
 import IconLink from "../components/IconLink";
 import Link from "../components/Link";
 import PlatformLink from "../components/PlatformLink";
@@ -11,10 +11,10 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <div class="w-full h-full pt-0 px-8 pb-8 flex justify-center">
-            <div class="w-full max-w-6xl h-full flex flex-col items-center">
-                <div class="w-full flex justify-center items-center gap-20">
-                    <div class="flex justify-center items-center gap-8">
+        <div class="flex h-full w-full justify-center px-8 pt-0 pb-8">
+            <div class="flex h-full w-full max-w-6xl flex-col items-center">
+                <div class="flex w-full items-center justify-center gap-20">
+                    <div class="flex items-center justify-center gap-8">
                         <a href="/">
                             <img
                                 src={logo}
@@ -56,7 +56,7 @@ export default function Layout({ children }: LayoutProps) {
                             RSS Feed
                         </Link>
                     </div>
-                    <span class="text-sm text-neutral-400">
+                    <span class="text-neutral-400 text-sm">
                         הקוד המזעזע שלנו נמצא ב-
                         <Link
                             variant="inline-link"

@@ -43,11 +43,11 @@ export default function PlatformLink({
                 <a
                     {...props}
                     href={href}
-                    class={`bg-none border-2 border-neutral-400 rounded-lg text-neutral-400 font-bold text-lg px-6 py-3 cursor-pointer hover:bg-neutral-900 hover:border-neutral-900 hover:text-neutral-0 transition-all duration-200 ${props.class}`}
+                    class={`cursor-pointer rounded-lg border-2 border-neutral-400 bg-none px-6 py-3 font-bold text-lg text-neutral-400 transition-all duration-200 hover:border-neutral-900 hover:bg-neutral-900 hover:text-neutral-0 ${props.class}`}
                 >
                     <div class="flex items-center gap-3" dir="ltr">
                         <div
-                            class={`${icon} w-12 h-12 text-transparent`}
+                            class={`${icon} h-12 w-12 text-transparent`}
                             style={{
                                 background: iconColor,
                                 color: "transparent",
@@ -55,7 +55,7 @@ export default function PlatformLink({
                         />
                         <div class="flex flex-col" dir="ltr">
                             <span class="text-sm">Listen on</span>
-                            <span class="text-2xl line-height-snug">
+                            <span class="line-height-snug text-2xl">
                                 {label}{" "}
                                 <span class="font-normal">Podcasts</span>
                             </span>
@@ -68,10 +68,10 @@ export default function PlatformLink({
                 <a
                     {...props}
                     href={href}
-                    class={`flex items-center gap-2 text-neutral-400 font-bold text-md px-2 py-1 rounded-md cursor-pointer hover:bg-neutral-50 hover:text-neutral-900 transition-all duration-200 ${props.class}`}
+                    class={`flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 font-bold text-md text-neutral-400 transition-all duration-200 hover:bg-neutral-50 hover:text-neutral-900 ${props.class}`}
                 >
                     <div
-                        class={`${icon} w-6 h-6 text-transparent`}
+                        class={`${icon} h-6 w-6 text-transparent`}
                         style={{
                             background: iconColor,
                             color: "transparent",

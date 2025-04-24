@@ -8,9 +8,9 @@ export default function IconLink(props: IconLinkProps) {
     return (
         <a
             href={props.href}
-            class={`w-6 h-6 text-neutral-400 cursor-pointer hover:text-neutral-900 transition-color duration-200 ${props.class}`}
+            class={`h-6 w-6 cursor-pointer text-neutral-400 transition-color duration-200 hover:text-neutral-900 ${props.class}`}
         >
-            <div class={`${props.icon} w-full h-full`} />
+            <div class={`${props.icon} h-full w-full`} />
         </a>
     );
 }
