@@ -42,11 +42,12 @@ export default function EpisodeComponent({
                     innerHTML={description()}
                 />
                 <p class="text-sm text-neutral-400 mt-2">{episode.date}</p>
-                <Show when={expanded}>
+                <Show when={expanded()}>
                     <audio
                         class="w-full mt-4"
                         src={episode.audioUrl}
                         controls
+                        preload="metadata"
                         onEnded={onEnded}
                     >
                         <track kind="captions" />

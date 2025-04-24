@@ -1,3 +1,4 @@
+- [ ] show <audio /> only when episode is open
 - [ ] responsiveness
   - [ ] laptop
   - [ ] mobile
@@ -5,4 +6,3 @@
 - [ ] google analytics
   - [ ] setup
   - [ ] log on enter/exit routes
-- [ ] single episode page
