@@ -70,7 +70,7 @@ export default function PlatformLink({
                 <a
                     {...props}
                     href={href}
-                    class={`flex cursor-pointer items-center gap-2 rounded-md px-1 py-0 tablet:px-2 tablet:py-1 font-bold laptop:text-md text-neutral-400 text-sm transition-all duration-200 hover:bg-neutral-50 hover:text-neutral-900 ${props.class}`}
+                    class={`flex cursor-pointer items-center gap-2 rounded-md px-1 tablet:px-2 py-0 tablet:py-1 font-bold laptop:text-md text-neutral-400 text-sm transition-all duration-200 hover:bg-neutral-50 hover:text-neutral-900 ${props.class}`}
                 >
                     <div
                         class={`${icon} h-4 laptop:h-6 laptop:w-6 w-4 text-transparent`}

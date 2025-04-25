@@ -4,7 +4,9 @@ export default function Ask() {
     return (
         <div class="flex h-full w-full flex-col items-center gap-8">
             <Hero title="רוצים שנענה על השאלה שלכם באחד הפרקים?">
-                <span class="text-primary text-2xl desktop:text-3xl font-bold">מלאו את הטופס שלמטה 👇</span>
+                <span class="font-bold desktop:text-3xl text-2xl text-primary">
+                    מלאו את הטופס שלמטה 👇
+                </span>
             </Hero>
             <iframe
                 title="Google Form"
