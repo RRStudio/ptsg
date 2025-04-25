@@ -20,7 +20,7 @@ type LinksProps = {
     onClick?: (event: MouseEvent) => void;
 };
 
-function Links({ linkClass, onClick }: LinksProps) {
+function Links(props: LinksProps) {
     const links = [
         { href: "/", label: "בית" },
         { href: "/episodes", label: "פרקים" },
@@ -31,7 +31,11 @@ function Links({ linkClass, onClick }: LinksProps) {
     return (
         <For each={links}>
             {(link) => (
-                <Link href={link.href} class={linkClass} onClick={onClick}>
+                <Link
+                    href={link.href}
+                    class={props.linkClass}
+                    onClick={props.onClick}
+                >
                     {link.label}
                 </Link>
             )}
@@ -57,17 +61,14 @@ function Social() {
 function Mobile() {
     const [menuOpen, setMenuOpen] = createSignal(false);
 
-    function IconButton({
-        icon,
-        onClick,
-    }: { icon: string; onClick: () => void }) {
+    function IconButton(props: { icon: string; onClick: () => void }) {
         return (
             <button
                 type="button"
                 class="h-6 w-6 cursor-pointer text-neutral-400 transition-color duration-200 hover:text-neutral-900"
-                onClick={onClick}
+                onClick={props.onClick}
             >
-                <div class={`${icon} h-full w-full`} />
+                <div class={`${props.icon} h-full w-full`} />
             </button>
         );
     }

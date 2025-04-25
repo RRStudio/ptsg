@@ -2,10 +2,10 @@ import EpisodeList from "../components/EpisodeList";
 import Hero from "../components/Hero";
 import Link from "../components/Link";
 import PlatformLink from "../components/PlatformLink";
-import { useEpisodes } from "../services/episode";
+import { useEpisodesContext } from "../services/episode";
 
 export default function Home() {
-    const episodes = useEpisodes();
+    const episodes = useEpisodesContext();
     const trimmedEpisodes = () => episodes().slice(0, 3);
 
     return (

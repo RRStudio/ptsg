@@ -1,4 +1,10 @@
-import { createResource } from "solid-js";
+import {
+    type InitializedResource,
+    type JSX,
+    createContext,
+    createResource,
+    useContext,
+} from "solid-js";
 import { formatDate } from "../utils/date";
 
 export const RSS_FEED_URL =
@@ -30,7 +36,22 @@ export type Episode = {
     summary: string;
 };
 
-export function useEpisodes() {
+type EpisodesContext = InitializedResource<Episode[]>;
+const EpisodesContext = createContext<EpisodesContext | null>(null);
+
+export function useEpisodesContext() {
+    const context = useContext(EpisodesContext);
+
+    if (!context) {
+        throw new Error(
+            "useEpisodesContext must be used within a EpisodesProvider",
+        );
+    }
+
+    return context;
+}
+
+export function EpisodesProvider(props: { children: JSX.Element }) {
     const [episodes] = createResource<Episode[]>(
         async () => {
             try {
@@ -57,5 +78,9 @@ export function useEpisodes() {
         { initialValue: [] },
     );
 
-    return episodes;
+    return (
+        <EpisodesContext.Provider value={episodes}>
+            {props.children}
+        </EpisodesContext.Provider>
+    );
 }

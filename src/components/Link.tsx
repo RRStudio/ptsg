@@ -1,5 +1,5 @@
 import { A } from "@solidjs/router";
-import type { JSX } from "solid-js";
+import { type JSX, splitProps } from "solid-js";
 
 export type LinkProps = {
     variant?: "link" | "inline-link" | "button";
@@ -9,11 +9,12 @@ export type LinkProps = {
     onClick?: (event: MouseEvent) => void;
 };
 
-export default function Link({
-    variant = "link",
-    children,
-    ...props
-}: LinkProps) {
+export default function Link(props: LinkProps) {
+    const [{ variant = "link", children }, other] = splitProps(props, [
+        "variant",
+        "children",
+    ]);
+
     function getClass() {
         const link =
             "text-neutral-400 text-md font-bold hover:text-neutral-900 hover:underline transition-color duration-200";
@@ -30,8 +31,8 @@ export default function Link({
 
     return (
         <A
-            {...props}
-            class={`${getClass()} flex-grow-0 text-center ${props.class || ""}`}
+            {...other}
+            class={`${getClass()} flex-grow-0 text-center ${other.class || ""}`}
         >
             {children}
         </A>
