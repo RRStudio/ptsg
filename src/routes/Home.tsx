@@ -41,7 +41,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <h2 class="font-900 tablet:text-5xl text-4xl text-primary">
+            <h2 class="font-900 tablet:text-5xl text-3xl text-primary">
                 הפרקים האחרונים שלנו...
             </h2>
 
