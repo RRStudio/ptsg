@@ -23,7 +23,10 @@ function Footer() {
                 </div>
                 <div>
                     או ישירות ב-
-                    <Link variant="inline-link" href={RSS_FEED_URL}>
+                    <Link
+                        variant="inline-link"
+                        href="https://feeds.transistor.fm/ptsgdev"
+                    >
                         RSS Feed
                     </Link>
                 </div>
