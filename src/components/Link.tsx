@@ -6,6 +6,7 @@ export type LinkProps = {
     href: string;
     class?: string;
     children?: JSX.Element;
+    onClick?: (event: MouseEvent) => void;
 };
 
 export default function Link({

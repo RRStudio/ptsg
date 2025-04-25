@@ -44,7 +44,7 @@ function Footer() {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <div class="flex h-full w-full justify-center px-8 pt-0 pb-8">
+        <div class="flex h-full w-full justify-center px-3 tablet:px-8 pt-0 pb-3 tablet:pb-8">
             <div class="flex h-full w-full max-w-6xl flex-col items-center">
                 <Nav />
                 <div class="desktop:block hidden h-12" />
