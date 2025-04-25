@@ -1,11 +1,11 @@
 import { Show, createSignal, onCleanup } from "solid-js";
 import EpisodeList from "../components/EpisodeList";
-import { useEpisodes } from "../services/episode";
+import { useEpisodesContext } from "../services/episode";
 
 const ITEMS_PER_PAGE = 10;
 
 export default function Episodes() {
-    const episodes = useEpisodes();
+    const episodes = useEpisodesContext();
 
     const [currentPage, setCurrentPage] = createSignal(1);
     const [searchTerm, setSearchTerm] = createSignal("");

@@ -9,18 +9,18 @@ type PicProps = {
     description: string;
 };
 
-function Pic({ name, src, description }: PicProps) {
+function Pic(props: PicProps) {
     return (
         <div class="flex flex-col items-center gap-10">
             <img
-                src={src}
-                alt={name}
+                src={props.src}
+                alt={props.name}
                 class="max-h-70 w-full max-w-70 rounded-full border-8 border-primary object-cover"
             />
             <div class="flex w-full max-w-120 tablet:max-w-none flex-col gap-2 tablet:gap-4 text-center">
-                <h2 class="font-900 tablet:text-4xl text-3xl">{name}</h2>
+                <h2 class="font-900 tablet:text-4xl text-3xl">{props.name}</h2>
                 <p class="tablet:text-lg text-md text-neutral-400 leading-relaxed">
-                    {description}
+                    {props.description}
                 </p>
             </div>
         </div>

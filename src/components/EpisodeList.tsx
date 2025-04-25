@@ -15,7 +15,7 @@ export type EpisodesProps = {
     children?: JSX.Element;
 };
 
-export default function EpisodeList({ episodes, children }: EpisodesProps) {
+export default function EpisodeList(props: EpisodesProps) {
     const [currentPlaying, setCurrentPlaying] = createSignal<string | null>(
         null,
     );
@@ -31,7 +31,7 @@ export default function EpisodeList({ episodes, children }: EpisodesProps) {
         <div class="w-full max-w-4xl">
             <Suspense fallback={<Loader />}>
                 <Show
-                    when={episodes().length > 0}
+                    when={props.episodes().length > 0}
                     fallback={
                         <div class="text-center text-neutral-600">
                             <p class="text-xl">לא נמצאו פרקים</p>
@@ -40,7 +40,7 @@ export default function EpisodeList({ episodes, children }: EpisodesProps) {
                     }
                 >
                     <div class="flex w-full flex-col">
-                        <For each={episodes()}>
+                        <For each={props.episodes()}>
                             {(episode) => (
                                 <EpisodeComponent
                                     episode={episode}
@@ -54,7 +54,7 @@ export default function EpisodeList({ episodes, children }: EpisodesProps) {
                         </For>
                     </div>
 
-                    {children}
+                    {props.children}
                 </Show>
             </Suspense>
         </div>
