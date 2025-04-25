@@ -23,7 +23,7 @@ export default function Home() {
             </Hero>
 
             <div
-                class="flex justify-center items-center gap-3 tablet:gap-6 laptop:gap-10 flex-wrap"
+                class="flex flex-wrap items-center justify-center gap-3 laptop:gap-10 tablet:gap-6"
                 dir="ltr"
             >
                 <PlatformLink platform="spotify" />
@@ -31,7 +31,7 @@ export default function Home() {
                 <PlatformLink platform="youtube" />
             </div>
 
-            <div class="w-full my-4 tablet:my-8 laptop:my-12">
+            <div class="laptop:my-12 my-4 tablet:my-8 w-full">
                 <div class="flex flex-col items-center gap-3">
                     <span class="font-bold text-xl">
                         יש לכם שאלה לרועי ורון?
@@ -42,7 +42,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <h2 class="font-900 text-4xl tablet:text-5xl text-primary">
+            <h2 class="font-900 tablet:text-5xl text-4xl text-primary">
                 הפרקים האחרונים שלנו...
             </h2>
 

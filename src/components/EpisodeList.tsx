@@ -29,7 +29,7 @@ export default function EpisodeList({ episodes, children }: EpisodesProps) {
                 </div>
             }
         >
-            <div class="flex flex-col w-full max-w-4xl">
+            <div class="flex w-full max-w-4xl flex-col">
                 <For each={episodes()}>
                     {(episode) => (
                         <EpisodeComponent
