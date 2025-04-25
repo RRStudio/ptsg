@@ -8,6 +8,7 @@ import {
 } from "solid-js";
 import type { Episode } from "../services/episode";
 import EpisodeComponent from "./Episode";
+import Loader from "./Loader";
 
 export type EpisodesProps = {
     episodes: Accessor<Episode[]>;
@@ -27,39 +28,35 @@ export default function EpisodeList({ episodes, children }: EpisodesProps) {
     };
 
     return (
-        <Suspense
-            fallback={
-                <div class="text-center font-bold text-lg text-neutral-400">
-                    טוען...
-                </div>
-            }
-        >
-            <Show
-                when={episodes().length > 0}
-                fallback={
-                    <div class="text-center text-neutral-600">
-                        <p class="text-xl">לא נמצאו פרקים</p>
-                        <p class="mt-2">נסה לשנות את מונחי החיפוש</p>
+        <div class="w-full max-w-4xl">
+            <Suspense fallback={<Loader />}>
+                <Show
+                    when={episodes().length > 0}
+                    fallback={
+                        <div class="text-center text-neutral-600">
+                            <p class="text-xl">לא נמצאו פרקים</p>
+                            <p class="mt-2">נסה לשנות את מונחי החיפוש</p>
+                        </div>
+                    }
+                >
+                    <div class="flex w-full flex-col">
+                        <For each={episodes()}>
+                            {(episode) => (
+                                <EpisodeComponent
+                                    episode={episode}
+                                    expanded={() => isPlaying(episode)}
+                                    onEnded={() => {
+                                        setCurrentPlaying(null);
+                                    }}
+                                    onClick={() => handleEpisodeClick(episode)}
+                                />
+                            )}
+                        </For>
                     </div>
-                }
-            >
-                <div class="flex w-full max-w-4xl flex-col">
-                    <For each={episodes()}>
-                        {(episode) => (
-                            <EpisodeComponent
-                                episode={episode}
-                                expanded={() => isPlaying(episode)}
-                                onEnded={() => {
-                                    setCurrentPlaying(null);
-                                }}
-                                onClick={() => handleEpisodeClick(episode)}
-                            />
-                        )}
-                    </For>
-                </div>
 
-                {children}
-            </Show>
-        </Suspense>
+                    {children}
+                </Show>
+            </Suspense>
+        </div>
     );
 }
