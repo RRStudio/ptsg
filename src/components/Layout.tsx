@@ -42,7 +42,7 @@ function NavBar() {
 
 function Footer() {
     return (
-        <footer class="flex flex-col items-center gap-8 tablet:gap-4 laptop:pt-16 pt-12">
+        <footer class="flex w-full flex-col items-center gap-8 tablet:gap-4 laptop:pt-16 pt-12">
             <div class="flex flex-wrap items-center justify-center gap-2 laptop:text-md text-sm">
                 תאזינו לנו ב
                 <div
@@ -80,7 +80,7 @@ export default function Layout({ children }: LayoutProps) {
             <div class="flex h-full w-full max-w-6xl flex-col items-center">
                 <NavBar />
                 <div class="desktop:block hidden h-12" />
-                <div>{children}</div>
+                <div class="w-full">{children}</div>
                 <Footer />
             </div>
         </div>

@@ -1,7 +1,8 @@
 import { createResource } from "solid-js";
 import { formatDate } from "../utils/date";
 
-export const RSS_FEED_URL = "https://taupe-chebakia-f7b671.netlify.app/.netlify/functions/feed?url=https://feeds.transistor.fm/ptsgdev";
+export const RSS_FEED_URL =
+    "https://taupe-chebakia-f7b671.netlify.app/.netlify/functions/feed?url=https://feeds.transistor.fm/ptsgdev";
 
 type FeedItem = {
     title: string;
@@ -44,7 +45,7 @@ export function useEpisodes() {
                     link: item.link,
                     audioUrl: item.enclosure.url,
                     duration: item.itunes.duration,
-                    summary: item.itunes.summary
+                    summary: item.itunes.summary,
                 }));
 
                 return items;
