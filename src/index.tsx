@@ -1,6 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
 import App from "./components/App";
+import "./services/firebase"; // Initialize Firebase
 
 import "./index.css";
 import "virtual:uno.css";

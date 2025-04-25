@@ -14,6 +14,7 @@
         "@solidjs/router": "^0.15.3",
         "@unocss/reset": "66.1.0-beta.11",
         "dompurify": "^3.2.5",
+        "firebase": "^11.6.1",
         "solid-js": "^1.9.5"
     },
     "devDependencies": {
