@@ -20,7 +20,7 @@ export default function EpisodeComponent({
 
     return (
         <div
-            class="flex cursor-pointer gap-6 rounded-lg p-6 transition-colors duration-200 hover:bg-neutral-100"
+            class="flex cursor-pointer gap-6 rounded-lg p-6 text-start transition-colors duration-200 hover:bg-neutral-100"
             onKeyPress={(e) => {
                 if (e.key === " ") {
                     onClick?.();

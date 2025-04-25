@@ -1,4 +1,3 @@
-import { Suspense } from "solid-js";
 import EpisodeList from "../components/EpisodeList";
 import Hero from "../components/Hero";
 import Link from "../components/Link";
@@ -46,9 +45,7 @@ export default function Home() {
                 הפרקים האחרונים שלנו...
             </h2>
 
-            <Suspense fallback={<div>טוען...</div>}>
-                <EpisodeList episodes={trimmedEpisodes} />
-            </Suspense>
+            <EpisodeList episodes={trimmedEpisodes} />
         </div>
     );
 }

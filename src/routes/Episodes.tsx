@@ -1,4 +1,4 @@
-import { Show, Suspense, createSignal, onCleanup } from "solid-js";
+import { Show, createSignal, onCleanup } from "solid-js";
 import EpisodeList from "../components/EpisodeList";
 import { useEpisodes } from "../services/episode";
 
@@ -63,43 +63,41 @@ export default function Episodes() {
                 />
             </form>
 
-            <Suspense fallback={<div>טוען...</div>}>
-                <EpisodeList episodes={currentEpisodes}>
-                    <Show when={totalPages() > 1}>
-                        <div class="mt-8 flex gap-2">
-                            <button
-                                type="button"
-                                onClick={() =>
-                                    setCurrentPage((p) => Math.max(1, p - 1))
-                                }
-                                disabled={currentPage() === 1}
-                                class="rounded-lg bg-neutral-100 px-4 py-2 hover:bg-neutral-200 disabled:opacity-50"
-                            >
-                                הקודם
-                            </button>
-                            <span class="px-4 py-2">
-                                עמוד {currentPage()} מתוך {totalPages()}
-                            </span>
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    setCurrentPage((p) =>
-                                        Math.min(totalPages(), p + 1),
-                                    );
-                                    window.scrollTo({
-                                        top: 0,
-                                        behavior: "smooth",
-                                    });
-                                }}
-                                disabled={currentPage() === totalPages()}
-                                class="rounded-lg bg-neutral-100 px-4 py-2 hover:bg-neutral-200 disabled:opacity-50"
-                            >
-                                הבא
-                            </button>
-                        </div>
-                    </Show>
-                </EpisodeList>
-            </Suspense>
+            <EpisodeList episodes={currentEpisodes}>
+                <Show when={totalPages() > 1}>
+                    <div class="mt-8 flex gap-2">
+                        <button
+                            type="button"
+                            onClick={() =>
+                                setCurrentPage((p) => Math.max(1, p - 1))
+                            }
+                            disabled={currentPage() === 1}
+                            class="rounded-lg bg-neutral-100 px-4 py-2 hover:bg-neutral-200 disabled:opacity-50"
+                        >
+                            הקודם
+                        </button>
+                        <span class="px-4 py-2">
+                            עמוד {currentPage()} מתוך {totalPages()}
+                        </span>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setCurrentPage((p) =>
+                                    Math.min(totalPages(), p + 1),
+                                );
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                });
+                            }}
+                            disabled={currentPage() === totalPages()}
+                            class="rounded-lg bg-neutral-100 px-4 py-2 hover:bg-neutral-200 disabled:opacity-50"
+                        >
+                            הבא
+                        </button>
+                    </div>
+                </Show>
+            </EpisodeList>
         </div>
     );
 }
