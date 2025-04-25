@@ -1,7 +1,6 @@
 import type { JSX } from "solid-js";
 import Link from "../components/Link";
 import PlatformLink from "../components/PlatformLink";
-import { RSS_FEED_URL } from "../services/episode";
 import Nav from "./Nav";
 
 type LayoutProps = {
