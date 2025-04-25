@@ -16,7 +16,7 @@ function NavBar() {
                 <a href="/">
                     <img
                         src={logo}
-                        class="desktop:h-60 h-32 laptop:h-52 desktop:w-60 laptop:w-52 w-32"
+                        class="desktop:h-60 h-32 laptop:h-52 tablet:h-40 desktop:w-60 laptop:w-52 tablet:w-40 w-32"
                         alt="Logo"
                     />
                 </a>
@@ -42,7 +42,7 @@ function NavBar() {
 
 function Footer() {
     return (
-        <footer class="flex flex-col items-center gap-4 laptop:pt-16 pt-12">
+        <footer class="flex flex-col items-center gap-8 tablet:gap-4 laptop:pt-16 pt-12">
             <div class="flex flex-wrap items-center justify-center gap-2 laptop:text-md text-sm">
                 תאזינו לנו ב
                 <div

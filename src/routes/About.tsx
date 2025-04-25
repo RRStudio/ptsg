@@ -15,11 +15,11 @@ function Pic({ name, src, description }: PicProps) {
             <img
                 src={src}
                 alt={name}
-                class="h-70 w-70 rounded-full border-8 border-primary object-cover"
+                class="w-full max-w-70 max-h-70 rounded-full border-8 border-primary object-cover"
             />
-            <div class="flex flex-col gap-4 text-center">
-                <h2 class="font-900 text-4xl">{name}</h2>
-                <p class="text-lg text-neutral-400 leading-relaxed">
+            <div class="flex flex-col gap-2 tablet:gap-4 text-center w-full max-w-120 tablet:max-w-none">
+                <h2 class="font-900 text-3xl tablet:text-4xl">{name}</h2>
+                <p class="text-md tablet:text-lg text-neutral-400 leading-relaxed">
                     {description}
                 </p>
             </div>
@@ -49,7 +49,7 @@ export default function About() {
                     </div>
                 </Hero>
 
-                <div class="grid w-full grid-cols-1 gap-12 md:grid-cols-2">
+                <div class="grid w-full grid-cols-1 gap-12 tablet:grid-cols-2">
                     <Pic
                         src={royPhoto}
                         name="רועי שביט"

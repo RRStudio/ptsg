@@ -23,7 +23,7 @@ export default function Link({
             case "inline-link":
                 return `${link} text-neutral-900`;
             case "button":
-                return "bg-secondary rounded-lg text-neutral-0 font-bold text-lg px-5 py-3 cursor-pointer hover:brightness-80 transition-brightness duration-200";
+                return "bg-secondary rounded-lg text-neutral-0 font-bold text-lg px-4 py-2 laptop:px-5 laptop:py-3 cursor-pointer hover:brightness-80 transition-brightness duration-200";
         }
     }
 
