@@ -19,15 +19,15 @@ function Footer() {
                         alt="רועי"
                         class="h-10 w-10 rounded-full object-cover"
                     />
-                    <span class="font-bold">רועי</span>
+                    <span class="font-bold">רועי שביט</span>
                     <span class="mx-0.5">&</span>
                     <img
                         src="/src/assets/ron.jpg"
                         alt="רון"
                         class="h-10 w-10 rounded-full object-cover"
                     />
-                    <span class="font-bold">רון</span>
-                    <span> שחושבים שאתם אחלה.</span>
+                    <span class="font-bold">רון שביט</span>
+                    <span>שחושבים שאתם אחלה.</span>
                 </div>
             </div>
             <div class="flex flex-wrap items-center justify-center gap-2 laptop:text-md text-sm">
