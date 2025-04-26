@@ -10,6 +10,26 @@ type LayoutProps = {
 function Footer() {
     return (
         <footer class="flex w-full flex-col items-center gap-8 tablet:gap-4 laptop:pt-16 pt-12">
+            <div class="flex flex-col items-center gap-2">
+                <div class="flex flex-wrap items-center justify-center gap-2 rounded-lg bg-dim bg-opacity-20 px-4 py-2 laptop:text-md text-sm">
+                    <span class="font-bold text-primary">פותחים סוגריים</span>
+                    מוגש על ידי
+                    <img
+                        src="/src/assets/roy.jpg"
+                        alt="רועי"
+                        class="h-10 w-10 rounded-full object-cover"
+                    />
+                    <span class="font-bold">רועי</span>
+                    <span class="mx-0.5">&</span>
+                    <img
+                        src="/src/assets/ron.jpg"
+                        alt="רון"
+                        class="h-10 w-10 rounded-full object-cover"
+                    />
+                    <span class="font-bold">רון</span>
+                    <span> שחושבים שאתם אחלה.</span>
+                </div>
+            </div>
             <div class="flex flex-wrap items-center justify-center gap-2 laptop:text-md text-sm">
                 תאזינו לנו ב
                 <div
