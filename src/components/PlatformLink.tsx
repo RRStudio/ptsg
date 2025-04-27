@@ -57,7 +57,7 @@ export default function PlatformLink(props: PlatformLinkProps) {
                                 color: "transparent",
                             }}
                         />
-                        <div class="flex flex-col" dir="ltr">
+                        <div class="flex flex-col items-start" dir="ltr">
                             <span class="desktop:block hidden desktop:text-sm text-xs">
                                 Listen on
                             </span>
