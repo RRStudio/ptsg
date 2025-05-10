@@ -1,11 +1,11 @@
-import type { JSX } from "solid-js";
 import { useLocation } from "@solidjs/router";
+import type { JSX } from "solid-js";
 import { Show } from "solid-js";
+import ronPhoto from "../assets/ron.jpg";
+import royPhoto from "../assets/roy.jpg";
 import Link from "../components/Link";
 import PlatformLink from "../components/PlatformLink";
 import Nav from "./Nav";
-import ronPhoto from "../assets/ron.jpg";
-import royPhoto from "../assets/roy.jpg";
 
 type LayoutProps = {
     children?: JSX.Element;
