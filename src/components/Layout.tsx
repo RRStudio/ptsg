@@ -57,7 +57,7 @@ function Footer() {
 function Credits() {
     return (
         <div class="flex flex-col items-center gap-2">
-            <div class="flex flex-wrap items-center justify-center gap-2 rounded-lg bg-dim bg-opacity-20 px-4 py-2 laptop:text-md text-sm">
+            <div class="flex flex-wrap items-center justify-center gap-2 rounded-lg bg-primary bg-opacity-20 px-4 py-2 laptop:text-md text-sm">
                 <span class="font-bold text-primary">פותחים סוגריים</span>
                 מוגש על ידי
                 <img
