@@ -44,7 +44,7 @@ export default function PlatformLink(props: PlatformLinkProps) {
                 <a
                     {...other}
                     href={href}
-                    class={`tablet:w-auto w-full max-w-100 cursor-pointer rounded-lg border-2 border-neutral-400 bg-none desktop:px-6 px-4 desktop:py-3 py-2 font-bold text-neutral-400 transition-all duration-200 hover:border-neutral-900 hover:bg-neutral-900 hover:text-neutral-0 ${other.class}`}
+                    class={`tablet:w-auto w-full max-w-100 cursor-pointer rounded-lg border-3 border-neutral-100 desktop:px-6 px-4 desktop:py-3 py-2 font-bold text-neutral-100 transition-all duration-200 hover:border-neutral-90 hover:bg-neutral-90 hover:text-neutral-0 ${other.class}`}
                 >
                     <div
                         class="flex items-center justify-center gap-3"
@@ -74,7 +74,7 @@ export default function PlatformLink(props: PlatformLinkProps) {
                 <a
                     {...other}
                     href={href}
-                    class={`flex cursor-pointer items-center gap-2 rounded-md px-1 tablet:px-2 py-0 tablet:py-1 font-bold laptop:text-md text-neutral-400 text-sm transition-all duration-200 hover:bg-neutral-50 hover:text-neutral-900 ${other.class}`}
+                    class={`flex cursor-pointer items-center gap-2 rounded-md px-1 tablet:px-2 py-0 tablet:py-1 font-bold laptop:text-md text-neutral-100 text-sm transition-all duration-200 hover:bg-neutral-100 hover:text-neutral-0 ${other.class}`}
                 >
                     <div
                         class={`${icon} h-4 laptop:h-6 laptop:w-6 w-4 text-transparent`}

@@ -34,7 +34,7 @@ export default function EpisodeList(props: EpisodesProps) {
                     when={props.episodes().length > 0}
                     fallback={
                         <div class="text-center text-neutral-600">
-                            <p class="text-xl">לא נמצאו פרקים</p>
+                            <p class="font-900 text-xl">לא נמצאו פרקים</p>
                             <p class="mt-2">נסה לשנות את מונחי החיפוש</p>
                         </div>
                     }

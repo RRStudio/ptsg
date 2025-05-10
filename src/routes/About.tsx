@@ -11,15 +11,15 @@ type PicProps = {
 
 function Pic(props: PicProps) {
     return (
-        <div class="flex flex-col items-center gap-10">
+        <div class="flex flex-col items-center gap-6">
             <img
                 src={props.src}
                 alt={props.name}
-                class="max-h-70 w-full max-w-70 rounded-full border-8 border-primary object-cover"
+                class="max-h-70 w-full max-w-70 rounded-full border-6 border-neutral-100 object-cover p-0.5"
             />
-            <div class="flex w-full max-w-120 tablet:max-w-none flex-col gap-2 tablet:gap-4 text-center">
+            <div class="flex w-full max-w-120 tablet:max-w-none flex-col gap-2 tablet:gap-3 text-center">
                 <h2 class="font-900 tablet:text-4xl text-3xl">{props.name}</h2>
-                <p class="tablet:text-lg text-md text-neutral-400 leading-relaxed">
+                <p class="tablet:text-lg text-md text-neutral-70 leading-relaxed">
                     {props.description}
                 </p>
             </div>
@@ -34,15 +34,13 @@ export default function About() {
                 <Hero title="קצת עלינו">
                     <div class="flex flex-col items-center gap-8">
                         <p>
-                            <span class="font-bold text-primary">
-                                פותחים סוגריים
-                            </span>{" "}
-                            נולד מתוך רצון לעזור לאנשים בהייטק (וגם לאלה שבדרך
-                            לשם) לקבל פרספקטיבות שונות על כל מה שלא תמיד מדובר
-                            בשיחות היום-יום. אנחנו כאן כדי לשתף, להקשיב, ללמוד –
-                            ובעיקר לפתוח את הראש. אם גם לכם יש שאלות, תהיות או
-                            סתם מחשבות על החיים בתוך ובסביבת ההייטק – הגעתם
-                            למקום הנכון.
+                            <span class="font-bold">פותחים סוגריים</span> נולד
+                            מתוך רצון לעזור לאנשים בהייטק (וגם לאלה שבדרך לשם)
+                            לקבל פרספקטיבות שונות על כל מה שלא תמיד מדובר בשיחות
+                            היום-יום. אנחנו כאן כדי לשתף, להקשיב, ללמוד – ובעיקר
+                            לפתוח את הראש. אם גם לכם יש שאלות, תהיות או סתם
+                            מחשבות על החיים בתוך ובסביבת ההייטק – הגעתם למקום
+                            הנכון.
                         </p>
                         <Link variant="button" href="/ask">
                             תשאלו אותנו שאלה

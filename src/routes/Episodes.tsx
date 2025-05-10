@@ -56,8 +56,8 @@ export default function Episodes() {
                 }}
             >
                 <input
-                    class="flex-1 rounded-lg border border-neutral-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="חיפוש פרקים..."
+                    class="flex-1 rounded-lg bg-neutral-10 px-4 py-2 transition-all focus:outline-none focus:ring-2 focus:ring-neutral-100"
+                    placeholder="חפש פרקים..."
                     value={searchTerm()}
                     onInput={(e) => handleSearchInput(e.currentTarget.value)}
                 />

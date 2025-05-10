@@ -40,7 +40,7 @@ function Footer() {
                     </Link>
                 </div>
             </div>
-            <span class="text-neutral-400 text-sm">
+            <span class="text-neutral-100 text-sm">
                 הקוד המזעזע שלנו נמצא ב-
                 <Link
                     variant="inline-link"
@@ -57,8 +57,8 @@ function Footer() {
 function Credits() {
     return (
         <div class="flex flex-col items-center gap-2">
-            <div class="flex flex-wrap items-center justify-center gap-2 rounded-lg bg-primary bg-opacity-20 px-4 py-2 laptop:text-md text-sm">
-                <span class="font-bold text-primary">פותחים סוגריים</span>
+            <div class="flex flex-wrap items-center justify-center gap-2 rounded-lg bg-primary/10 px-4 py-2 laptop:text-md text-sm">
+                <span class="font-bold">פותחים סוגריים</span>
                 מוגש על ידי
                 <img
                     src={royPhoto}

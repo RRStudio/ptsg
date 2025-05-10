@@ -17,15 +17,15 @@ export default function Link(props: LinkProps) {
 
     function getClass() {
         const link =
-            "text-neutral-400 text-md font-bold hover:text-neutral-900 hover:underline transition-color duration-200";
+            "text-neutral-50 text-md font-bold hover:text-neutral-90 hover:underline transition-color duration-200";
 
         switch (variant) {
             case "link":
                 return link;
             case "inline-link":
-                return `${link} text-neutral-900`;
+                return `${link} text-neutral-90`;
             case "button":
-                return "w-full tablet:w-max max-w-100 bg-secondary rounded-lg text-neutral-0 font-bold text-lg px-4 py-2 laptop:px-5 laptop:py-3 cursor-pointer hover:brightness-80 transition-brightness duration-200";
+                return "w-full tablet:w-max max-w-100 bg-primary/10 rounded-lg text-primary font-bold text-lg px-4 py-2 laptop:px-5 laptop:py-3 cursor-pointer hover:bg-primary/20 transition-all duration-200";
         }
     }
 

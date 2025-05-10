@@ -15,7 +15,7 @@ export default function EpisodeComponent(props: EpisodeProps) {
 
     return (
         <div
-            class="flex cursor-pointer gap-3 tablet:gap-6 rounded-lg p-2 tablet:p-6 text-start transition-colors duration-200 hover:bg-neutral-100"
+            class="flex cursor-pointer gap-3 tablet:gap-6 rounded-lg p-2 tablet:p-6 text-start transition-colors duration-200 hover:bg-neutral-10"
             onKeyPress={(e) => {
                 if (e.key === " ") {
                     props.onClick?.();
@@ -26,21 +26,21 @@ export default function EpisodeComponent(props: EpisodeProps) {
             <img
                 src={logo}
                 alt={props.episode.title}
-                class="h-12 tablet:h-32 tablet:w-32 w-12 rounded-lg object-cover"
+                class="h-12 tablet:h-32 tablet:w-32 w-12 rounded-lg border-2 border-neutral-100 object-cover"
             />
             <div class="flex flex-1 flex-col gap-1 tablet:gap-2">
                 <h2 class="font-900 tablet:text-2xl text-md">
                     {props.episode.title}
                 </h2>
                 <p
-                    class={`prose prose-neutral tablet:text-md text-neutral-600 text-sm ${
+                    class={`prose prose-neutral tablet:text-md text-neutral-60 text-sm ${
                         props.expanded()
                             ? ""
                             : "line-clamp-2 tablet:line-clamp-3"
                     }`}
                     innerHTML={description()}
                 />
-                <span class="tablet:text-sm text-neutral-400 text-xs">
+                <span class="tablet:text-sm text-neutral-40 text-xs">
                     {props.episode.date}
                 </span>
                 <Show when={props.expanded()}>

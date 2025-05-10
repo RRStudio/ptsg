@@ -65,7 +65,7 @@ function Mobile() {
         return (
             <button
                 type="button"
-                class="h-6 w-6 cursor-pointer text-neutral-400 transition-color duration-200 hover:text-neutral-900"
+                class="h-6 w-6 cursor-pointer text-neutral-40 transition-color duration-200 hover:text-neutral-90"
                 onClick={props.onClick}
             >
                 <div class={`${props.icon} h-full w-full`} />

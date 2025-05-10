@@ -11,8 +11,8 @@ export default function Home() {
     return (
         <div class="flex flex-col items-center desktop:gap-12 gap-6 text-center">
             <Hero title="כל מה שלא טכני בהייטק">
-                <span class="font-bold text-primary">פותחים סוגריים</span> הוא
-                פודקאסט שבועי על כל מה שלא טכני בהייטק (ואולי גם כן).
+                <span class="font-bold">פותחים סוגריים</span> הוא פודקאסט שבועי
+                על כל מה שלא טכני בהייטק (ואולי גם כן).
                 <br />
                 <Link variant="inline-link" href="/about">
                     אנחנו
@@ -32,9 +32,7 @@ export default function Home() {
 
             <div class="laptop:my-12 my-4 tablet:my-8 w-full">
                 <div class="flex flex-col items-center gap-3">
-                    <span class="font-bold text-xl">
-                        יש לכם שאלה לרועי ורון?
-                    </span>
+                    <span class="font-bold text-xl">יש לכם שאלה לפודקאסט?</span>
                     <Link variant="button" href="/ask">
                         תשאלו אותנו שאלה
                     </Link>
