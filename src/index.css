@@ -6,3 +6,23 @@
     color: var(--colors-neutral-100);
     cursor: unset;
 }
+
+/* Safari-specific fixes for mobile overflow */
+@supports (-webkit-touch-callout: none) {
+    /* Safari mobile specific styles */
+    body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevent horizontal overflow in flex containers */
+    .flex {
+        min-width: 0;
+    }
+
+    /* Ensure audio elements don't overflow */
+    audio {
+        max-width: 100%;
+        width: 100%;
+    }
+}

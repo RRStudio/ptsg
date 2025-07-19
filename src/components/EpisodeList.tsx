@@ -28,7 +28,7 @@ export default function EpisodeList(props: EpisodesProps) {
     };
 
     return (
-        <div class="w-full max-w-4xl">
+        <div class="w-full max-w-4xl overflow-hidden">
             <Suspense fallback={<Loader />}>
                 <Show
                     when={props.episodes().length > 0}
@@ -39,7 +39,7 @@ export default function EpisodeList(props: EpisodesProps) {
                         </div>
                     }
                 >
-                    <div class="flex w-full flex-col">
+                    <div class="flex w-full flex-col overflow-hidden">
                         <For each={props.episodes()}>
                             {(episode) => (
                                 <EpisodeComponent
