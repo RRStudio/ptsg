@@ -1,22 +1,24 @@
 import { Route, Router } from "@solidjs/router";
 import About from "../routes/About";
 import Ask from "../routes/Ask";
+import EpisodeDetail from "../routes/EpisodeDetail";
 import Episodes from "../routes/Episodes";
 import Home from "../routes/Home";
 import { EpisodesProvider } from "../services/episode";
 import Layout from "./Layout";
 
 export default function App() {
-    return (
-        <EpisodesProvider>
-            <Router>
-                <Route path="/" component={Layout}>
-                    <Route path="/" component={Home} />
-                    <Route path="/episodes" component={Episodes} />
-                    <Route path="/ask" component={Ask} />
-                    <Route path="/about" component={About} />
-                </Route>
-            </Router>
-        </EpisodesProvider>
-    );
+  return (
+    <EpisodesProvider>
+      <Router>
+        <Route path="/" component={Layout}>
+          <Route path="/" component={Home} />
+          <Route path="/episodes" component={Episodes} />
+          <Route path="/episode/:episode" component={EpisodeDetail} />
+          <Route path="/ask" component={Ask} />
+          <Route path="/about" component={About} />
+        </Route>
+      </Router>
+    </EpisodesProvider>
+  );
 }
