@@ -1,11 +1,4 @@
-import {
-  type Accessor,
-  For,
-  type JSX,
-  Show,
-  Suspense,
-  createSignal,
-} from "solid-js";
+import { type Accessor, For, type JSX, Show, Suspense } from "solid-js";
 import { useNavigate } from "@solidjs/router";
 import type { Episode } from "../services/episode";
 import EpisodeComponent from "./Episode";
