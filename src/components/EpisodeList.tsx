@@ -5,43 +5,43 @@ import EpisodeComponent from "./Episode";
 import Loader from "./Loader";
 
 export type EpisodesProps = {
-  episodes: Accessor<Episode[]>;
-  children?: JSX.Element;
+    episodes: Accessor<Episode[]>;
+    children?: JSX.Element;
 };
 
 export default function EpisodeList(props: EpisodesProps) {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const handleEpisodeClick = (episode: Episode) => {
-    navigate(`/episode/${episode.episode}`);
-  };
+    const handleEpisodeClick = (episode: Episode) => {
+        navigate(`/episode/${episode.episode}`);
+    };
 
-  return (
-    <div class="w-full max-w-4xl overflow-hidden">
-      <Suspense fallback={<Loader />}>
-        <Show
-          when={props.episodes().length > 0}
-          fallback={
-            <div class="text-center text-neutral-600">
-              <p class="font-900 text-xl">לא נמצאו פרקים</p>
-              <p class="mt-2">נסה לשנות את מונחי החיפוש</p>
-            </div>
-          }
-        >
-          <div class="flex w-full flex-col overflow-hidden">
-            <For each={props.episodes()}>
-              {(episode) => (
-                <EpisodeComponent
-                  episode={episode}
-                  onClick={() => handleEpisodeClick(episode)}
-                />
-              )}
-            </For>
-          </div>
+    return (
+        <div class="w-full max-w-4xl overflow-hidden">
+            <Suspense fallback={<Loader />}>
+                <Show
+                    when={props.episodes().length > 0}
+                    fallback={
+                        <div class="text-center text-neutral-600">
+                            <p class="font-900 text-xl">לא נמצאו פרקים</p>
+                            <p class="mt-2">נסה לשנות את מונחי החיפוש</p>
+                        </div>
+                    }
+                >
+                    <div class="flex w-full flex-col overflow-hidden">
+                        <For each={props.episodes()}>
+                            {(episode) => (
+                                <EpisodeComponent
+                                    episode={episode}
+                                    onClick={() => handleEpisodeClick(episode)}
+                                />
+                            )}
+                        </For>
+                    </div>
 
-          {props.children}
-        </Show>
-      </Suspense>
-    </div>
-  );
+                    {props.children}
+                </Show>
+            </Suspense>
+        </div>
+    );
 }

@@ -3,7 +3,7 @@ import { analytics } from "../services/firebase";
 import { logEvent } from "firebase/analytics";
 
 export type PlatformLinkProps = JSX.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    platform: "spotify" | "apple" | "youtube";
+    platform: "spotify" | "apple" | "youtube" | "youtube-old";
     variant?: "button" | "link";
 };
 
@@ -31,6 +31,13 @@ export default function PlatformLink(props: PlatformLinkProps) {
                     href: "https://podcasts.apple.com/podcast/ptsgdev/id1809322756",
                 };
             case "youtube":
+                return {
+                    icon: "i-cib-youtube",
+                    iconColor: "#ff0000",
+                    label: "YouTube",
+                    href: "https://youtube.com/playlist?list=PLrMw5ZtBlm7jBjEKGCieeOY9Ds7aHc-d5&si=d6y8FL-xZIex8whh",
+                };
+            case "youtube-old":
                 return {
                     icon: "i-cib-youtube",
                     iconColor: "#ff0000",

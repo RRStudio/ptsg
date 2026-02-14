@@ -8,17 +8,17 @@ import { EpisodesProvider } from "../services/episode";
 import Layout from "./Layout";
 
 export default function App() {
-  return (
-    <EpisodesProvider>
-      <Router>
-        <Route path="/" component={Layout}>
-          <Route path="/" component={Home} />
-          <Route path="/episodes" component={Episodes} />
-          <Route path="/episode/:episode" component={EpisodeDetail} />
-          <Route path="/ask" component={Ask} />
-          <Route path="/about" component={About} />
-        </Route>
-      </Router>
-    </EpisodesProvider>
-  );
+    return (
+        <EpisodesProvider>
+            <Router>
+                <Route path="/" component={Layout}>
+                    <Route path="/" component={Home} />
+                    <Route path="/episodes" component={Episodes} />
+                    <Route path="/episode/:episode" component={EpisodeDetail} />
+                    <Route path="/ask" component={Ask} />
+                    <Route path="/about" component={About} />
+                </Route>
+            </Router>
+        </EpisodesProvider>
+    );
 }
