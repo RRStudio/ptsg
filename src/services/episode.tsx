@@ -9,7 +9,7 @@ import { formatDate } from "../utils/date";
 import { formatDuration } from "../utils/time";
 
 export const RSS_FEED_URL =
-    "https://be.ptsg.dev/.netlify/functions/feed?url=https://feeds.transistor.fm/ptsgdev";
+    "https://be.ptsg.dev/.netlify/functions/feed?url=https://api.riverside.fm/hosting/8F3uMaNp.rss";
 
 type FeedItem = {
     title: string;

@@ -34,7 +34,7 @@ function Footer() {
                     או ישירות ב-
                     <Link
                         variant="inline-link"
-                        href="https://feeds.transistor.fm/ptsgdev"
+                        href="https://api.riverside.fm/hosting/8F3uMaNp.rss"
                     >
                         RSS Feed
                     </Link>
