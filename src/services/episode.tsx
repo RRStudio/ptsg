@@ -73,6 +73,7 @@ export function EpisodesProvider(props: { children: JSX.Element }) {
                     imageUrl: item.itunes.image,
                 }));
 
+                items.sort((a, b) => b.episode - a.episode);
                 return items;
             } catch (error) {
                 console.error("Error fetching episodes:", error);
